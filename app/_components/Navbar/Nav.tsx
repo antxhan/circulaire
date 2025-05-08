@@ -23,7 +23,7 @@ export default function Nav() {
         ))}
       </div>
       <div className="flex items-center gap-4">
-        <Link href="/login" className="text-sm text-white hover:text-blue-500">Sign in</Link>
+        <Link href="/login" className="text-sm text-white hover:text-blue-500">Sing in</Link>
         <Link href="/signup" className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 text-sm font-medium">
           Book a Demo
         </Link>
