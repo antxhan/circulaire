@@ -1,26 +1,46 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* NEUTRAL COLORS */
+  --clr-neutral-900: #000000;
+  --clr-neutral-400: #a0a0a0;
+  --clr-neutral-300: #bfbfbf; /* strokes */
+  --clr-neutral-200: #efefef;
+  --clr-neutral-100: #fbfbfb; /* main bg */
+  --clr-neutral-000: #fff;
+
+  /* ACCENT COLORS */
+  --clr-blue: #1a58bb;
+  --clr-green: #11a665;
+  --clr-teal: #1ab2cd;
+  --clr-red: #bc2f00;
+  --clr-yellow: #e99b1f;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-background: var(--clr-neutral-100);
+  --color-foreground: var(--clr-neutral-900);
+  --font-body: var(--font-inter);
+  --font-accent: var(--font-spartan);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* DARK MODE NEUTRAL COLORS */
+    --clr-neutral-000: #171717;
+    --clr-neutral-100: #000000;
+    --clr-neutral-900: #ffffff;
+
+    /* DARK MODE ACCENT COLORS */
+    --clr-blue: #1a58bb;
+    --clr-green: #084a2d;
+    --clr-teal: #0e6271;
+    --clr-red: #651a01;
+    --clr-yellow: #be7e16;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--clr-neutral-100);
+  color: var(--clr-neutral-900);
 }
