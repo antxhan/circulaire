@@ -1,3 +1,9 @@
+import HelloWorld from "./_sections/HelloWorld";
+
 export default function Home() {
-  return <div>Hello World</div>;
+  return (
+    <div>
+      <HelloWorld />
+    </div>
+  );
 }
