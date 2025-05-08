@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import './Nav.css';
 
 const Nav = () => {
   const navItems = [
@@ -9,37 +10,40 @@ const Nav = () => {
   ];
 
   return (
-    <header className="w-full border-b bg-white dark:bg-black text-black dark:text-white">
-      <div className="max-w-7xl mx-auto px-8 py-4 flex items-center justify-between">
-        {/* Logo */}
-        <Link href="/" className="text-xl font-bold tracking-tight">
-          Circulaire
-        </Link>
+    <header className="nav-header">
+      <div className="nav-container">
 
-        {/* Navigation */}
-        <nav className="flex items-center space-x-8">
-          {navItems.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="text-sm font-medium hover:text-blue-600 transition-colors"
-            >
-              {item.label}
-            </Link>
-          ))}
-          <Link
-            href="/login"
-            className="text-sm font-medium hover:text-blue-600 transition-colors"
-          >
+       
+        <div className="nav-left">
+          <Link href="/" className="logo">
+            <div className="logo-img">
+              <img src="logo2.svg" alt="Logo" />
+            </div>
+            <span>Circulaire</span>
+          </Link>
+
+          <nav className="nav-links">
+            {navItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="nav-link"
+              >
+                {item.label}
+              </Link>
+            ))}
+          </nav>
+        </div>
+
+        {/* سمت راست: دکمه‌ها */}
+        <div className="nav-actions">
+          <Link href="/login" className="nav-link">
             Log in
           </Link>
-          <Link
-            href="/signup"
-            className="ml-4 px-4 py-2 bg-blue-600 text-white text-sm font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-          >
+          <Link href="/signup" className="signup-btn">
             Get Started
           </Link>
-        </nav>
+        </div>
       </div>
     </header>
   );
