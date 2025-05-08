@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, League_Spartan } from "next/font/google";
 import "./globals.css";
+import Nav from "./_components/Navbar/Nav";
+import Header from "./_components/Navbar/Header";
 
 export const metadata: Metadata = {
   title: "Circulaire",
@@ -19,11 +21,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+
     <html
       lang="en"
       className={`${inter.variable} ${leagueSpartan.variable} font-body`}
     >
-      <body className={`antialiased`}>{children}</body>
+      <body className={`antialiased`}>
+      
+      <Header/>
+        {children}
+      </body>
+      
     </html>
   );
 }
