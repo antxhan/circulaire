@@ -1,48 +1,33 @@
-import React from 'react';
+// app/_components/Navbar/Nav.tsx
+"use client";
 import Link from 'next/link';
 
-const Nav = () => {
-  const navItems = [
-    { label: 'Features', href: '#features' },
-    { label: 'About', href: '#about' },
-    { label: 'API', href: '#api' },
-  ];
+const navItems = [
+  { label: 'Features', href: '#features' },
+  { label: 'About', href: '#about' },
+  { label: 'API', href: 'https://app.gocirculaire.com/login' },
+];
 
+export default function Nav() {
   return (
-    <header className="w-full border-b bg-white dark:bg-black text-black dark:text-white">
-      <div className="max-w-7xl mx-auto px-8 py-4 flex items-center justify-between">
-        {/* Logo */}
-        <Link href="/" className="text-xl font-bold tracking-tight">
-          Circulaire
-        </Link>
-
-        {/* Navigation */}
-        <nav className="flex items-center space-x-8">
-          {navItems.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="text-sm font-medium hover:text-blue-600 transition-colors"
-            >
-              {item.label}
-            </Link>
-          ))}
+    <nav className="flex items-center justify-between py-4 px-6 w-full">
+      <div className="flex items-center gap-6">
+        {navItems.map((item) => (
           <Link
-            href="/login"
-            className="text-sm font-medium hover:text-blue-600 transition-colors"
+            key={item.href}
+            href={item.href}
+            className="text-sm font-medium text-white hover:text-blue-500 transition-colors"
           >
-            Log in
+            {item.label}
           </Link>
-          <Link
-            href="/signup"
-            className="ml-4 px-4 py-2 bg-blue-600 text-white text-sm font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Get Started
-          </Link>
-        </nav>
+        ))}
       </div>
-    </header>
+      <div className="flex items-center gap-4">
+        <Link href="/login" className="text-sm text-white hover:text-blue-500">Sign in</Link>
+        <Link href="/signup" className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 text-sm font-medium">
+          Book a Demo
+        </Link>
+      </div>
+    </nav>
   );
-};
-
-export default Nav;
+}
