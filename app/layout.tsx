@@ -29,7 +29,7 @@ export default function RootLayout({
       <Nav/>
         {children}
       </body>
-      main
+      
     </html>
   );
 }
