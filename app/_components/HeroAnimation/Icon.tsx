@@ -7,7 +7,7 @@ export default function Icon({
 }) {
   return (
     <div
-      className={`bg-blue rounded-[50%] w-12 h-12 flex items-center justify-center text-neutral-000 absolute ${className}`}
+      className={`bg-blue rounded-[50%] w-12 h-12 flex items-center justify-center text-neutral-000 dark:text-neutral-900 absolute ${className}`}
     >
       {icon}
     </div>
