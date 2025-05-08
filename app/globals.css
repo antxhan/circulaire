@@ -52,9 +52,32 @@
   /* FONTS */
   --font-body: var(--font-inter);
   --font-accent: var(--font-spartan);
+
+  /* ANIMATIONS */
+  --animate-orbit: orbit 10s linear infinite;
+  --animate-counter-orbit: counter-orbit 10s linear infinite;
+
+  @keyframes orbit {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes counter-orbit {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
 }
 
 body {
   background: var(--clr-neutral-100);
   color: var(--clr-neutral-900);
+  border: 2px solid red;
 }
