@@ -79,5 +79,4 @@
 body {
   background: var(--clr-neutral-100);
   color: var(--clr-neutral-900);
-  border: 2px solid red;
 }
