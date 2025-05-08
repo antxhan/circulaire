@@ -17,13 +17,6 @@
   --clr-yellow: #e99b1f;
 }
 
-@theme inline {
-  --color-background: var(--clr-neutral-100);
-  --color-foreground: var(--clr-neutral-900);
-  --font-body: var(--font-inter);
-  --font-accent: var(--font-spartan);
-}
-
 @media (prefers-color-scheme: dark) {
   :root {
     /* DARK MODE NEUTRAL COLORS */
@@ -38,6 +31,27 @@
     --clr-red: #651a01;
     --clr-yellow: #be7e16;
   }
+}
+
+@theme inline {
+  /* COLORS */
+  --color-background: var(--clr-neutral-100);
+  --color-foreground: var(--clr-neutral-900);
+  --color-blue: var(--clr-blue);
+  --color-green: var(--clr-green);
+  --color-teal: var(--clr-teal);
+  --color-red: var(--clr-red);
+  --color-yellow: var(--clr-yellow);
+  --color-neutral-900: var(--clr-neutral-900);
+  --color-neutral-400: var(--clr-neutral-400);
+  --color-neutral-300: var(--clr-neutral-300);
+  --color-neutral-200: var(--clr-neutral-200);
+  --color-neutral-100: var(--clr-neutral-100);
+  --color-neutral-000: var(--clr-neutral-000);
+
+  /* FONTS */
+  --font-body: var(--font-inter);
+  --font-accent: var(--font-spartan);
 }
 
 body {
