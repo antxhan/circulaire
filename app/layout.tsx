@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Head from 'next/head';
 import { Inter, League_Spartan } from "next/font/google";
 import "./globals.css";
 import Nav from "./_components/Navbar/Nav";
@@ -15,6 +16,7 @@ const leagueSpartan = League_Spartan({
   variable: "--font-spartan",
 });
 
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -26,10 +28,11 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${leagueSpartan.variable} font-body`}
     >
+      <Head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap" />
+      </Head>
       <body className={`antialiased`}>
-      
-    
-      <Header/>
+        <Header/>
         {children}
       </body>
       

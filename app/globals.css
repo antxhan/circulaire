@@ -57,4 +57,5 @@
 body {
   background: var(--clr-neutral-100);
   color: var(--clr-neutral-900);
+  font-family: "League Spartan", sans-serif;
 }
