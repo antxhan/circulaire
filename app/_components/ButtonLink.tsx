@@ -14,7 +14,7 @@ export default function ButtonLink({
   return (
     <Link
       href={href}
-      className={`inline-flex items-center gap-2 px-4 py-2 rounded-full font-accent font-medium text-base text-white bg-blue hover:bg-blue-600 bg-neutral-000 ${className}`}
+      className={`inline-flex items-center gap-2 px-4 py-2 rounded-full font-accent font-bold text-base text-neutral-000 bg-blue hover:bg-blue-600 ${className}`}
     >
       {icon && <span>{icon}</span>}
       <span>{text}</span>
