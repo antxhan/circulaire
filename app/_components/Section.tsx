@@ -1,4 +1,5 @@
 import H2 from "./H2";
+import Wrapper from "./Wrapper";
 
 export default function Section({
   title,
@@ -11,13 +12,10 @@ export default function Section({
 }) {
   return (
     <section className="py-16">
-      <div className="max-w-screen-xl mx-auto ">
-        <div className="max-w-screen-lg mx-auto px-4">
-          {title && <H2 text={title} />}
-          {children}
-        </div>
-        {fullWidthComponent}
-      </div>
+      <Wrapper fullWidthComponent={fullWidthComponent}>
+        {title && <H2 text={title} />}
+        {children}
+      </Wrapper>
     </section>
   );
 }
