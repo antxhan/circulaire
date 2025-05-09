@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter, League_Spartan } from "next/font/google";
 import "./globals.css";
 import Nav from "./_components/Navbar/Nav";
-import Header from "./_components/Navbar/Header";
+import Header from "./_components/Header/Header";
 
 export const metadata: Metadata = {
   title: "Circulaire",
