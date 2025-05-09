@@ -40,7 +40,7 @@ export default function ProfileCard({
           {role}
         </p>
 
-        <div className="">
+        <div>
           {contacts.map((contact) => (
             <Link
               key={contact.label}
