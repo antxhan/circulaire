@@ -1,5 +1,4 @@
-// app/_components/Navbar/Nav.tsx
-"use client";
+
 import Link from 'next/link';
 
 const navItems = [
