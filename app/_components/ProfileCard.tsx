@@ -1,22 +1,28 @@
 import Image from "next/image";
 import Link from "next/link";
 
+interface ContactDetails {
+  icon: string;
+  label: string;
+  url: string;
+}
+
 interface ProfileCardProps {
   name: string;
   role: string;
   imageSrc: string;
-  linkedinUrl: string;
+  contacts: ContactDetails[];
 }
 
 export default function ProfileCard({
   name,
   role,
   imageSrc,
-  linkedinUrl,
+  contacts,
 }: ProfileCardProps) {
   return (
-    <div className="w-[444px] h-[332px] flex items-start space-x-6">
-      <div className="w-[150px] h-[150px] rounded-full bg-neutral-300 overflow-hidden">
+    <div className="flex items-center gap-8">
+      <div className="w-[150px] h-[150px] rounded-full bg-neutral-300">
         <Image
           src={imageSrc}
           alt={name}
@@ -26,20 +32,30 @@ export default function ProfileCard({
         />
       </div>
 
-      <div className="w-[212px] h-[81px] pt-1">
-        <h3 className="text-black text-2xl font-bold font-['League_Spartan']">
+      <div className="gap-2">
+        <h3 className=" text-2xl font-bold font-accent">
           {name}
         </h3>
-        <p className="text-black text-base font-normal font-['Inter'] italic">
+        <p className=" text-base italic">
           {role}
         </p>
-        <Link
-          href={linkedinUrl}
-          target="_blank"
-          className="inline-block mt-2"
-        >
-          <Image src="/linkedin.svg" alt="LinkedIn" width={24} height={24} />
-        </Link>
+
+        <div className="">
+          {contacts.map((contact) => (
+            <Link
+              key={contact.label}
+              href={contact.url}
+              target="_blank"
+            >
+              <Image
+                src={contact.icon}
+                alt={contact.label}
+                width={24}
+                height={24}
+              />
+            </Link>
+          ))}
+         </div>
       </div>
     </div>
   );
