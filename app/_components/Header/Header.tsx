@@ -1,6 +1,6 @@
-import Link from 'next/link';
-import Nav from '../Navbar/Nav';
-import Image from 'next/image';
+import Link from "next/link";
+import Nav from "../Navbar/Nav";
+import Image from "next/image";
 
 export default function Header() {
   return (
@@ -10,9 +10,9 @@ export default function Header() {
           <Image
             src="/logo.svg"
             alt="logo"
-            width={100}    
-            height={100}  
-            style={{ filter: 'invert(1)' }}
+            width={100}
+            height={100}
+            style={{ filter: "invert(1)" }}
           />
         </Link>
         <Nav />
