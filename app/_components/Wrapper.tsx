@@ -3,7 +3,7 @@ export default function Wrapper({
   children,
   className,
 }: {
-  fullWidthComponent: React.ReactNode;
+  fullWidthComponent?: React.ReactNode;
   children: React.ReactNode;
   className?: string;
 }) {
