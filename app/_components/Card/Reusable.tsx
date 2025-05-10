@@ -1,18 +1,15 @@
-import React from "react";
-
-interface ReusableProps {
-  children?: React.ReactNode;
+export default function Card({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
   className?: string;
-}
-
-const Reusable: React.FC<ReusableProps> = ({ children, className = "" }) => {
+}) {
   return (
     <div
-      className={`bg-white rounded-xl w-[360px] h-[120px] shadow-sm ${className}`}
+      className={`bg-neutral-000 rounded-xl min-w-96 min-h-32 border border-neutral-300 ${className}`}
     >
       {children}
     </div>
   );
-};
-
-export default Reusable;
+}
