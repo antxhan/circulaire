@@ -15,15 +15,15 @@ const leagueSpartan = League_Spartan({
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html
       lang="en"
       className={`${inter.variable} ${leagueSpartan.variable} font-body`}
     >
-      <body className={`antialiased`}>{children}</body>
+      <body className="antialiased bg-gray-100">{children}</body>
     </html>
   );
 }
