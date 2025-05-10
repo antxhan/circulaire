@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import ExternalLink from "./ExternalLink";
 
 interface ContactDetails {
   icon: string;
@@ -33,29 +33,21 @@ export default function ProfileCard({
       </div>
 
       <div className="gap-2">
-        <h3 className=" text-2xl font-bold font-accent">
-          {name}
-        </h3>
-        <p className=" text-base italic">
-          {role}
-        </p>
+        <h3 className=" text-2xl font-bold font-accent">{name}</h3>
+        <p className=" text-base italic">{role}</p>
 
         <div>
           {contacts.map((contact) => (
-            <Link
-              key={contact.label}
-              href={contact.url}
-              target="_blank"
-            >
+            <ExternalLink key={contact.label} href={contact.url}>
               <Image
                 src={contact.icon}
                 alt={contact.label}
                 width={24}
                 height={24}
               />
-            </Link>
+            </ExternalLink>
           ))}
-         </div>
+        </div>
       </div>
     </div>
   );
