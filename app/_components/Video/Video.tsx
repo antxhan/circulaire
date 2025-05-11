@@ -1,16 +1,11 @@
-export default function Video({
-  src,
-  className,
-  children,
-}: {
-  src: string;
-  className?: string;
-  children?: React.ReactNode;
-}) {
+export default function VideoPlayer() {
   return (
-    <div className={`...`}>
-      <video src={src} controls className="..." />
-      {children && <div className="p-4">{children}</div>}
-    </div>
+    <video
+      controls
+      className="w-full max-w-xl h-auto rounded-xl border border-neutral-300"
+    >
+      <source src="/video.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
   );
 }
