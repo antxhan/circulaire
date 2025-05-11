@@ -1,4 +1,6 @@
 import Section from "../_components/Section";
+import { StepNavigator } from "../_components/Toogle/StepNavigator";
+import { ThemeToggle } from "../_components/Toogle/ThemeToggle";
 
 export default function HelloWorld() {
   return (
@@ -12,6 +14,9 @@ export default function HelloWorld() {
       }
     >
       <p>This is a Section. It has some inline padding.</p>
+      {/* Examples of toggle component */}
+      <ThemeToggle />
+      <StepNavigator darkMode activeStep={'2'} />
     </Section>
   );
 }
