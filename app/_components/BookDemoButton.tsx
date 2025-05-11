@@ -6,8 +6,8 @@ export default function BookDemoButton() {
         <ButtonLink
         href="/book-demo"
         text="Book a Demo"
-        icon={CalendarIcon}
-        className="bg-#1a58bb text-white"
+        icon={<CalendarIcon className="w-4 h-4"/>}
+        className="--clr-blue text-white"
         />
     )
 }
