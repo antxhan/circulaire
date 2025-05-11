@@ -4,10 +4,9 @@ import CalendarIcon from "../_icons/CalendarIcon";
 export default function BookDemoButton() {
     return (
         <ButtonLink
-        href="/book-demo"
+        href="https://calendar.app.google/wtUEmDXJM6m6hm4bA"
         text="Book a Demo"
-        icon={<CalendarIcon className="w-4 h-4"/>}
-        className="--clr-blue text-white"
+        icon={<CalendarIcon />}
         />
     )
 }
