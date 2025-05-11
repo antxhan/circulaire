@@ -1,5 +1,5 @@
 import Link from "next/link";
-import BookDemoButton from "../BookDemoButton";
+import BookDemoButton from "./BookDemoButton";
 
 const navItems = [
   { label: "Features", href: "#features" },

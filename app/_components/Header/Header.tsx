@@ -1,5 +1,6 @@
 import Link from "next/link";
-import Nav from "../Navbar/Nav";
+import Nav from "../Nav";
+
 import Image from "next/image";
 
 export default function Header() {
