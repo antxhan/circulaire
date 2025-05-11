@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, League_Spartan } from "next/font/google";
 import "./globals.css";
+import Footer from "./_sections/Footer";
 
 export const metadata: Metadata = {
   title: "Circulaire",
@@ -23,7 +24,10 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${leagueSpartan.variable} font-body`}
     >
-      <body className={`antialiased`}>{children}</body>
+      <body className={`antialiased`}>
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
