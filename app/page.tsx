@@ -4,10 +4,6 @@ export default function Home() {
   return (
     <div>
       <HelloWorld />
-      <HelloWorld />
-      <HelloWorld />
-      <HelloWorld />
-      <HelloWorld />
     </div>
   );
 }
