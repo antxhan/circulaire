@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter, League_Spartan } from "next/font/google";
 import "./globals.css";
 import Footer from "./_sections/Footer";
-
+import Header from "./_sections/Header";
 export const metadata: Metadata = {
   title: "Circulaire",
   description: "The #1 Realtime Pricing Insights Platform",
@@ -24,8 +24,8 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${leagueSpartan.variable} font-body`}
     >
-
       <body className={`antialiased`}>
+        <Header />
         {children}
         <Footer />
       </body>
