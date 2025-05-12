@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 
 import { Inter, League_Spartan } from "next/font/google";
 import "./globals.css";
-
 import Header from "./_components/Header/Header";
 import Footer from "./_sections/Footer";
 
@@ -29,9 +28,7 @@ export default function RootLayout({
     >
       <body className={`antialiased`}>
         <Header />
-
         {children}
-
         <Footer />
       </body>
     </html>
