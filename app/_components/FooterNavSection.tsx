@@ -6,22 +6,29 @@ type Link = {
   className?: string;
 };
 
-type FooterNavSectionProps = {
+export default function FooterNavSection({
+  heading,
+  links,
+}: {
   heading: string;
   links: Link[];
-};
-
-export default function FooterNavSection({ heading, links }: FooterNavSectionProps) {
+}) {
   return (
-    <div className="flex flex-col">
-      <h4 className="font-bold font-accent">{heading}</h4>
-      <nav className="flex flex-col gap-1">
-        {links.map((link) => (
-          <ExternalLink key={link.href} href={link.href} className={link.className || "text-xs"}>
-            {link.label}
-          </ExternalLink>
-        ))}
-      </nav>
+    <div className="flex flex-col gap-2 border-4 border-red-300 ">
+      <h4 className="font-bold font-accent text-xl">{heading}</h4>
+      <ul className="">
+        <li className="flex flex-col gap-2">
+          {links.map((link) => (
+            <ExternalLink
+              key={link.href}
+              href={link.href}
+              className={link.className}
+            >
+              {link.label}
+            </ExternalLink>
+          ))}
+        </li>
+      </ul>
     </div>
   );
 }
