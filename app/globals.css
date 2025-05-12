@@ -73,19 +73,16 @@
       transform: rotate(-360deg);
     }
   }
-}
 
-@keyframes scroll-horizontal {
-  0% {
-    transform: translateX(0%);
+  --animate-scroll-horizontal: scroll-horizontal 20s linear infinite;
+  @keyframes scroll-horizontal {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
   }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-.animate-scroll {
-  animation: scroll-horizontal 20s linear infinite;
 }
 
 body {
