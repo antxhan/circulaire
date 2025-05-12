@@ -1,8 +1,10 @@
+import { links } from "./links";
+
 const navLinks = {
   about: { label: "About", href: "#about" },
   api: {
     label: "API",
-    href: "https://app.gocirculaire.com/login",
+    href: links.signIn,
   },
   features: { label: "Features", href: "#features" },
   press: {
