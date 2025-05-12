@@ -1,7 +1,8 @@
 import Card from "../_components/Card";
 import AnalyticsIcon from "../_icons/AnalyticsIcon";
-import DatabasedIcon from "../_icons/DatabaseIcon";
+import DatabaseIcon from "../_icons/DatabaseIcon";
 import PointerIcon from "../_icons/PointerIcon";
+
 import Section from "../_components/Section";
 
 export default function CardsSection() {
@@ -13,7 +14,7 @@ export default function CardsSection() {
         "Quickly get market insights for watches, handbags, clothing, sneakers, and accessories.",
     },
     {
-      icon: DatabasedIcon,
+      icon: DatabaseIcon,
       title: "Plug & Play data sources",
       description:
         "Access niche sources and enable them easily for better market insights.",
@@ -51,13 +52,12 @@ export default function CardsSection() {
         Where pricing meets precision
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {" "}
         {features.map((feature, index) => (
           <Card
             key={index}
-            className="bg-[var(--clr-neutral-100)] text-[var(--clr-neutral-900)] p-6 rounded-lg shadow-lg" // اضافه کردن padding، border-radius و shadow برای زیبایی بیشتر
+            className="bg-[var(--clr-neutral-100)] text-[var(--clr-neutral-900)] p-6 rounded-lg shadow-lg"
           >
-            {feature.icon && <feature.icon />}
+            {feature.icon ? <feature.icon /> : null}
             <h3 className="font-semibold mt-4">
               {feature.title}
               {feature.label && (
