@@ -1,9 +1,9 @@
+import Link from "next/link";
 import ExternalLink from "../_components/ExternalLink";
 
 type Link = {
   href: string;
   label: string;
-  className?: string;
 };
 
 export default function FooterNavSection({
@@ -18,15 +18,18 @@ export default function FooterNavSection({
       <h4 className="font-bold font-accent text-xl">{heading}</h4>
       <ul>
         <li className="flex flex-col gap-2">
-          {links.map((link) => (
-            <ExternalLink
-              key={link.href}
-              href={link.href}
-              className={link.className}
-            >
-              {link.label}
-            </ExternalLink>
-          ))}
+          {links.map((link) =>
+            link.href.startsWith("http") ? (
+              // meaning it is an external link
+              <ExternalLink key={link.href} href={link.href}>
+                {link.label}
+              </ExternalLink>
+            ) : (
+              <Link key={link.href} href={link.href}>
+                {link.label}
+              </Link>
+            )
+          )}
         </li>
       </ul>
     </div>
