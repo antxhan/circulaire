@@ -1,16 +1,12 @@
-import Card from "./Card";
+import Card from "../_components/Card";
 import AnalyticsIcon from "../_icons/AnalyticsIcon";
-import APIIcon from "../_icons/APIIcon";
-import BellIcon from "../_icons/BellIcon";
-import CalenderIcon from "../_icons/CalendarIcon";
-import ComputerIcon from "../_icons/ComputerIcon";
 import DatabasedIcon from "../_icons/DatabaseIcon";
 import PointerIcon from "../_icons/PointerIcon";
-
+import Section from "../_components/Section";
 export default function CardsSection() {
   const features = [
     {
-      icon: ComputerIcon,
+      icon: null,
       title: "Easy-to-use interface",
       description:
         "Quickly get market insights for watches, handbags, clothing, sneakers, and accessories.",
@@ -22,7 +18,7 @@ export default function CardsSection() {
         "Access niche sources and enable them easily for better market insights.",
     },
     {
-      icon: APIIcon,
+      icon: null,
       title: "Powerful APIs",
       description:
         "Don’t need our UI? No problem. Let our API integrate with your business flows.",
@@ -35,7 +31,7 @@ export default function CardsSection() {
       label: "Coming soon",
     },
     {
-      icon: BellIcon,
+      icon: null,
       title: "Pricing alerts",
       description:
         "Follow specific products and receive real-time pricing trend alerts.",
@@ -59,7 +55,7 @@ export default function CardsSection() {
             key={index}
             className="bg-[var(--clr-neutral-100)] text-[var(--clr-neutral-900)]"
           >
-            <feature.icon />
+            {feature.icon && <feature.icon />}
             <h3 className="font-semibold mt-4">
               {feature.title}
               {feature.label && (
