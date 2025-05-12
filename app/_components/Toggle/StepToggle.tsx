@@ -1,10 +1,9 @@
 'use client'
-import {useState} from 'react';
-import {Toggle} from './Toogle';
+import { useState } from 'react';
+import { Toggle } from './Toggle';
 
-type StepNavigatorProps = {
-    darkMode?: boolean;
-    activeStep?: string;
+type StepToggleProps = {
+    activeStep: string;
     onClick?: () => void;
 }
 
@@ -14,10 +13,10 @@ const steps = [
     {id: '3', content: '3. Step'}
 ];
 
-export const StepNavigator = ({darkMode = false, activeStep, onClick}: StepNavigatorProps) => {
+export const StepToggle = ({activeStep = '1', onClick}: StepToggleProps) => {
      const [currentStep, setCurrentStep] = useState(activeStep ?? '1');
     
-    const onChange = (id: string) => {
+    const onClickInternal = (id: string) => {
         setCurrentStep(id)
         onClick?.()
     }
@@ -26,8 +25,7 @@ export const StepNavigator = ({darkMode = false, activeStep, onClick}: StepNavig
          <Toggle
              items={steps}
              activeId={currentStep}
-             onChange={onChange}
-             darkMode={darkMode}
+             onClick={onClickInternal}
          />
      );
  };
