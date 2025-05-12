@@ -8,10 +8,6 @@ import DatabasedIcon from "../_icons/DatabaseIcon";
 import DollarIcon from "../_icons/DollarIcon";
 import ExternalLinkIcon from "../_icons/ExternalLinkIcon";
 import MoonIcon from "../_icons/MoonIcon";
-import PointerIcon from "../_icons/PointerIcon";
-import RefreshIcon from "../_icons/RefreshIcon";
-import SearchIcon from "../_icons/SearchIcon";
-import SunIcon from "../_icons/SunIcon";
 
 export default function CardsSection() {
   return (
