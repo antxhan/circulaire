@@ -4,7 +4,7 @@ import Wrapper from "./Wrapper";
 export default function Section({
   title,
   fullWidthComponent,
-  className,
+  className = "",
   children,
 }: {
   title?: string;
