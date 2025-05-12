@@ -14,9 +14,9 @@ export default function FooterNavSection({
   links: Link[];
 }) {
   return (
-    <div className="flex flex-col gap-2 border-4 border-red-300 ">
+    <div className="flex flex-col gap-2 max-sm:text-center">
       <h4 className="font-bold font-accent text-xl">{heading}</h4>
-      <ul className="">
+      <ul>
         <li className="flex flex-col gap-2">
           {links.map((link) => (
             <ExternalLink

@@ -19,10 +19,6 @@ export const footerLinks = (
   [
     { category: "Product", links: ["features", "api"] },
     { category: "Company", links: ["about", "press"] },
-    // { category: "Company2", links: ["about", "press"] },
-    // { category: "Company3", links: ["about", "press"] },
-    // { category: "Company4", links: ["about", "press"] },
-    // { category: "Company5", links: ["about", "press"] },
   ] as const
 ).map(({ category, links }) => ({
   category,
