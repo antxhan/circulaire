@@ -3,6 +3,7 @@ import AnalyticsIcon from "../_icons/AnalyticsIcon";
 import DatabasedIcon from "../_icons/DatabaseIcon";
 import PointerIcon from "../_icons/PointerIcon";
 import Section from "../_components/Section";
+
 export default function CardsSection() {
   const features = [
     {
@@ -49,11 +50,13 @@ export default function CardsSection() {
       <h2 className="text-2xl font-bold mb-8 text-[var(--clr-neutral-900)]">
         Where pricing meets precision
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {" "}
+        {/* افزایش gap */}
         {features.map((feature, index) => (
           <Card
             key={index}
-            className="bg-[var(--clr-neutral-100)] text-[var(--clr-neutral-900)]"
+            className="bg-[var(--clr-neutral-100)] text-[var(--clr-neutral-900)] p-6 rounded-lg shadow-lg" // اضافه کردن padding، border-radius و shadow برای زیبایی بیشتر
           >
             {feature.icon && <feature.icon />}
             <h3 className="font-semibold mt-4">
