@@ -1,4 +1,5 @@
-import TestimonialCard from "./TestimonialCard";
+import TestimonialCard from "../_components/TestimonialCard";
+import Section from "../_components/Section";
 
 const testimonials = [
   {
@@ -26,10 +27,12 @@ const testimonials = [
 
 export default function WhatUsersSay() {
   return (
-    <section className="flex flex-col md:flex-row justify-center gap-4 max-w-5xl mx-auto">
-      {testimonials.map((testimonials, index) => (
-        <TestimonialCard key={index} {...testimonials} />
-      ))}
-    </section>
+    <Section title="What our users are saying">
+      <div className="mt-12 flex flex-col md:flex-row justify-center gap-4 max-w-5xl mx-auto">
+        {testimonials.map((testimonials, index) => (
+          <TestimonialCard key={index} {...testimonials} />
+        ))}
+      </div>
+    </Section>
   );
 }
