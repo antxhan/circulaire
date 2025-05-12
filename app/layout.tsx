@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 import { Inter, League_Spartan } from "next/font/google";
 import "./globals.css";
-import Header from "./_components/Header";
+import Header from "./_sections/Header";
 import Footer from "./_sections/Footer";
 
 export const metadata: Metadata = {
