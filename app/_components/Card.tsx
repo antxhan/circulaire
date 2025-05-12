@@ -1,6 +1,6 @@
 export default function Card({
   children,
-  className,
+  className = "",
 }: {
   children: React.ReactNode;
   className?: string;

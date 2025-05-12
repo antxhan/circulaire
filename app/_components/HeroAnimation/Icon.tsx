@@ -1,6 +1,6 @@
 export default function Icon({
   icon,
-  className,
+  className = "",
 }: {
   icon: React.ReactNode;
   className?: string;

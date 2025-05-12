@@ -31,6 +31,9 @@
     --clr-red: #651a01;
     --clr-yellow: #be7e16;
   }
+  a:hover {
+    color: var(--color-blue-400) !important;
+  }
 }
 
 @theme inline {
@@ -88,4 +91,12 @@
 body {
   background: var(--clr-neutral-100);
   color: var(--clr-neutral-900);
+}
+
+a {
+  width: max-content;
+}
+
+a:hover {
+  color: var(--color-blue-500);
 }
