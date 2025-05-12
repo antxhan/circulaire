@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
+
 import { Inter, League_Spartan } from "next/font/google";
 import "./globals.css";
-import Footer from "./_sections/Footer";
 import Header from "./_sections/Header";
+import Footer from "./_sections/Footer";
 export const metadata: Metadata = {
   title: "Circulaire",
   description: "The #1 Realtime Pricing Insights Platform",
