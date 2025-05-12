@@ -1,11 +1,12 @@
 import HelloWorld from "./_sections/HelloWorld";
-import { Tailormadefor } from "./_sections/Tailormadefor";
+import { TailorMadeFor } from "./_sections/TailorMadeFor";
+
 
 export default function Home() {
   return (
     <div>
       <HelloWorld />
-      <Tailormadefor />
+      <TailorMadeFor />
     </div>
   );
 }
