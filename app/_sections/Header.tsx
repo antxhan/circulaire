@@ -1,23 +1,17 @@
 import Link from "next/link";
 import Nav from "../_components/Nav";
-
-import Image from "next/image";
+import Wrapper from "../_components/Wrapper";
+import WordMarkLogo from "../_icons/WordMarkLogo";
 
 export default function Header() {
   return (
-    <header className=" text-neutral-900 bg-neutral-000">
-      <div className="flex items-center justify-between px-6 py-4">
-        <Link href="/" className="flex items-center gap-2">
-          <Image
-            src="/logos/logo.svg"
-            alt="logo"
-            width={100}
-            height={100}
-            style={{ filter: "invert(1)" }}
-          />
+    <header className="bg-neutral-100/80 backdrop-blur-md sticky top-0">
+      <Wrapper className="flex items-center gap-12 font-accent h-24">
+        <Link href="/" className="hover:!text-neutral-900">
+          <WordMarkLogo />
         </Link>
         <Nav />
-      </div>
+      </Wrapper>
     </header>
   );
 }

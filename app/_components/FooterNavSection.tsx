@@ -1,27 +1,37 @@
+import Link from "next/link";
 import ExternalLink from "../_components/ExternalLink";
 
 type Link = {
   href: string;
   label: string;
-  className?: string;
 };
 
-type FooterNavSectionProps = {
+export default function FooterNavSection({
+  heading,
+  links,
+}: {
   heading: string;
   links: Link[];
-};
-
-export default function FooterNavSection({ heading, links }: FooterNavSectionProps) {
+}) {
   return (
-    <div className="flex flex-col">
-      <h4 className="font-bold font-accent">{heading}</h4>
-      <nav className="flex flex-col gap-1">
-        {links.map((link) => (
-          <ExternalLink key={link.href} href={link.href} className={link.className || "text-xs"}>
-            {link.label}
-          </ExternalLink>
-        ))}
-      </nav>
+    <div className="flex flex-col gap-2 max-sm:text-center">
+      <h4 className="font-bold font-accent text-xl">{heading}</h4>
+      <ul>
+        <li className="flex flex-col gap-2">
+          {links.map((link) =>
+            link.href.startsWith("http") ? (
+              // meaning it is an external link
+              <ExternalLink key={link.href} href={link.href}>
+                {link.label}
+              </ExternalLink>
+            ) : (
+              <Link key={link.href} href={link.href}>
+                {link.label}
+              </Link>
+            )
+          )}
+        </li>
+      </ul>
     </div>
   );
 }
