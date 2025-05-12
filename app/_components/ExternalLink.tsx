@@ -1,6 +1,6 @@
 export default function ExternalLink({
   href,
-  className,
+  className = "",
   children,
 }: {
   href: string;

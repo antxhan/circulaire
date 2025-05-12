@@ -1,7 +1,7 @@
 export default function Wrapper({
   fullWidthComponent,
   children,
-  className,
+  className = "",
 }: {
   fullWidthComponent?: React.ReactNode;
   children: React.ReactNode;
