@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function AnimateScrollHorizontal({
+export default function LogoBannerScroll({
   className,
 }: {
   className?: string;
