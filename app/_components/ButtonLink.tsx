@@ -4,7 +4,7 @@ export default function ButtonLink({
   href,
   text = "Click me",
   icon,
-  className,
+  className = "",
   target,
 }: {
   href: string;
