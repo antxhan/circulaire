@@ -93,6 +93,10 @@ body {
   color: var(--clr-neutral-900);
 }
 
+a {
+  width: max-content;
+}
+
 a:hover {
   color: var(--color-blue-500);
 }
