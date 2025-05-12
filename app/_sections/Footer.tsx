@@ -27,7 +27,10 @@ export default function Footer() {
         </div>
         <div className="flex justify-between gap-8 flex-wrap max-sm:items-center max-sm:flex-col">
           <div className="flex gap-4 flex-col max-sm:items-center">
-            <ExternalLink href="https://www.linkedin.com/company/circulaire">
+            <ExternalLink
+              href="https://www.linkedin.com/company/circulaire"
+              className="w-max"
+            >
               <Image
                 src="socials/linkedin.svg"
                 alt="LinkedIn"
