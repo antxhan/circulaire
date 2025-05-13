@@ -1,13 +1,21 @@
-export default function BellIcon() {
+export default function BellIcon({
+  width = 24,
+  height = 24,
+  strokeWidth = 2,
+}: {
+  width?: number;
+  height?: number;
+  strokeWidth?: number;
+}) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width={24}
-      height={24}
+      width={width}
+      height={height}
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      strokeWidth={2}
+      strokeWidth={strokeWidth}
       strokeLinecap="round"
       strokeLinejoin="round"
       className="icon icon-tabler icons-tabler-outline icon-tabler-bell"
