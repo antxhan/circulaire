@@ -11,70 +11,106 @@ import H2 from "../_components/H2";
 export default function Features() {
   const features = [
     {
-      icon: PointerIcon,
+      icon: <PointerIcon width={48} height={48} strokeWidth={1} />,
+      bgColor: "bg-green",
+      textColor: "text-green",
       title: "Easy-to-use interface",
       description:
         "Quickly get market insights for watches, handbags, clothing, sneakers, and accessories.",
     },
     {
-      icon: DatabaseIcon,
+      icon: <DatabaseIcon width={48} height={48} strokeWidth={1} />,
+      bgColor: "bg-red",
+      textColor: "text-red",
       title: "Plug & Play data sources",
       description:
         "Access niche sources and enable them easily for better market insights.",
     },
     {
-      icon: APIIcon,
+      icon: <APIIcon width={48} height={48} strokeWidth={1} />,
+      bgColor: "bg-teal",
+      textColor: "text-teal",
       title: "Powerful APIs",
       description:
         "Don’t need our UI? No problem. Let our API integrate with your business flows.",
     },
     {
-      icon: AnalyticsIcon,
+      icon: <AnalyticsIcon width={48} height={48} strokeWidth={1} />,
+      bgColor: "bg-teal",
+      textColor: "text-teal",
       title: "Analytics",
       description:
         "Get deeper insights into market data with our upcoming analytics platform.",
-      label: "Coming soon",
+      label: "COMING SOON",
     },
     {
-      icon: BellIcon,
+      icon: <BellIcon width={48} height={48} strokeWidth={1} />,
+      bgColor: "bg-yellow",
+      textColor: "text-yellow",
       title: "Pricing alerts",
       description:
         "Follow specific products and receive real-time pricing trend alerts.",
     },
     {
-      icon: DollarIcon,
+      icon: <DollarIcon width={48} height={48} strokeWidth={1} />,
+      bgColor: "bg-green",
+      textColor: "text-green",
       title: "Automated pricing",
       description:
         "Integrate with our API to automate pricing of your inventory, supporting all major ERPs.",
     },
   ];
-
   return (
-    <Section className="py-12">
-      <H2 className="text-center">Where pricing meets precision</H2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+    <Section wrapperClassName="flex flex-col gap-12" id="features">
+      <H2 className="text-center md:text-left">
+        Where pricing meets precision
+      </H2>
+      <div
+        className="
+        grid 
+        grid-cols-[repeat(auto-fit,minmax(24rem,1fr))] 
+        auto-rows-fr
+        gap-4"
+      >
         {features.map((feature) => (
           <Card
             key={feature.title}
-            className="w-full bg-neutral-100 text-neutral-900 p-6"
+            className="items-center gap-4 grid grid-cols-[min(100%,100px)_1fr] grid-rows-[20px_auto] min-h-full p-4"
           >
-            <span className="inline-block mb-2">
-              <feature.icon className="w-7 h-7 text-primary-600" />
-            </span>
-            <h3 className="font-semibold mt-4 flex items-center gap-2">
-              {feature.title}
-              {feature.label && (
-                <span className="text-xs rounded bg-black text-white px-2 py-0.5 ml-2">
-                  {feature.label}
-                </span>
-              )}
-            </h3>
-            <p className="text-sm text-neutral-500 mt-2">
-              {feature.description}
-            </p>
+            <div
+              className={`
+              rounded-full text-white ${feature.bgColor}
+              aspect-square max-w-full
+              flex items-center justify-center
+              grid-rows-subgrid row-span-2
+              
+              `}
+            >
+              {feature.icon}
+            </div>
+
+            <div className="gap-2 grid grid-rows-subgrid row-span-2">
+              <header className="flex items-center text-nowrap">
+                <h3
+                  className={`font-bold text-xl ${feature.textColor} dark:text-white`}
+                >
+                  {feature.title}
+                </h3>
+                {feature.label && (
+                  <span className="text-xs font-bold bg-neutral-200 dark:bg-black py-1 px-2 rounded-full ml-auto">
+                    {feature.label}
+                  </span>
+                )}
+              </header>
+              <p className="text-neutral-500 dark:text-white row-start-2 text-pretty">
+                {feature.description}
+              </p>
+            </div>
           </Card>
         ))}
       </div>
     </Section>
   );
 }
+
+// grid-rows-[20px_auto]
