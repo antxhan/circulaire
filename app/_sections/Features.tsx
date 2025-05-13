@@ -4,7 +4,7 @@ import DatabaseIcon from "../_icons/DatabaseIcon";
 import PointerIcon from "../_icons/PointerIcon";
 import Section from "../_components/Section";
 
-export default function CardsSection() {
+export default function Features() {
   const features = [
     {
       icon: null,
