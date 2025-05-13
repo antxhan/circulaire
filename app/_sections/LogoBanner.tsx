@@ -4,8 +4,10 @@ import LogoBannerScroll from "../_components/LogoBannerScroll";
 
 export default function LogoBannerSection() {
   return (
-    <Section title="Placeholder Title">
-      <H2 className="mb-12 ml-6">PlaceHolder Title</H2>
+    <Section>
+      <H2 className="mb-12 md:ml-6 text-center md:text-left text-3xl md:text-5xl">
+        PlaceHolder Title
+      </H2>
       <LogoBannerScroll />
     </Section>
   );
