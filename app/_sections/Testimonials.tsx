@@ -25,9 +25,9 @@ const testimonials = [
   },
 ];
 
-export default function WhatUsersSay() {
+export default function Testimonials() {
   return (
-    <Section title="What our users are saying">
+    <Section>
       <div className="mt-12 flex flex-col md:flex-row justify-center gap-4 mx-auto">
         {testimonials.map((testimonials, index) => (
           <TestimonialCard key={index} {...testimonials} />
