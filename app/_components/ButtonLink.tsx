@@ -14,7 +14,7 @@ export default function ButtonLink({
   onClick?: () => void;
   className?: string;
 }) {
-  const clsName = `inline-flex items-center gap-2.5 px-4.5 h-11 rounded-full font-accent font-bold text-base text-nowrap text-white bg-blue hover:bg-blue-600 hover:!text-white ${className}`;
+  const clsName = `inline-flex items-center gap-2.5 px-4.5 h-11 rounded-full font-accent font-bold text-base text-nowrap text-white bg-blue hover:bg-blue-600 hover:!text-white transition-all ${className}`;
   return href.startsWith("http") ? (
     <ExternalLink href={href} className={clsName} onClick={onClick}>
       {icon && <span>{icon}</span>}

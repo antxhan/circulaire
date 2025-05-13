@@ -15,7 +15,10 @@ export default function Section({
   children: React.ReactNode;
 }) {
   return (
-    <section className={`py-16 ${className}`} {...(id ? { id: id } : {})}>
+    <section
+      className={`py-16 scroll-mt-16 ${className}`}
+      {...(id ? { id: id } : {})}
+    >
       <Wrapper
         fullWidthComponent={fullWidthComponent}
         className={wrapperClassName}
