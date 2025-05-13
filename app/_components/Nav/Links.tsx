@@ -3,6 +3,7 @@ import Link from "next/link";
 import { headerLinks } from "@/app/_constants/navLinks";
 import ButtonLink from "../ButtonLink";
 import { links } from "@/app/_constants/links";
+import OnPageLink from "../OnPageLink";
 
 export default function Links({
   className = "",
@@ -25,6 +26,10 @@ export default function Links({
               <ExternalLink href={href} onClick={onLinkClick}>
                 {label}
               </ExternalLink>
+            ) : href.startsWith("#") ? (
+              <OnPageLink href={href} onClick={onLinkClick}>
+                {label}
+              </OnPageLink>
             ) : (
               <Link href={href} onClick={onLinkClick}>
                 {label}
