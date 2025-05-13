@@ -5,7 +5,7 @@ import { TextRotator } from "../_components/TextRotator";
  
  export const TailorMadeFor = () => (
      <Section>
-        <div className="flex items-center gap-4">
+        <div className="flex flex-col sm:flex-row items-center sm:gap-4">
             <h2 className="text-2xl font-bold text-black whitespace-nowrap leading-[80px] height-[80px]">
                 Tailor-made for
             </h2>
