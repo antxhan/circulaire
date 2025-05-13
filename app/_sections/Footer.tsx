@@ -9,13 +9,13 @@ export default function Footer() {
   return (
     <footer className="border-t border-neutral-300 pt-12">
       <Wrapper className="flex flex-col gap-12">
-        <div className="flex gap-12 justify-between max-sm:flex-col max-sm:items-center">
+        <div className="flex max-sm:flex-col-reverse gap-12 justify-between max-sm:items-center">
           <div className="h-[8rem] w-[8rem] bg-gray-500 aspect-square">
             animation
           </div>
           <div
             className={`flex flex-wrap
-              gap-x-32 gap-y-8 justify-center w-full sm:justify-end`}
+              gap-x-32 gap-y-8 justify-center w-full sm:justify-end max-sm:flex-row-reverse`}
           >
             {footerLinks.map(({ category, links }) => (
               <FooterNavSection
