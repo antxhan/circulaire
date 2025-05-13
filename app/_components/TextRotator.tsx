@@ -10,11 +10,11 @@ import {motion, AnimatePresence} from 'framer-motion';
  };
  
  const variants = {
-     enter: {y: -90, opacity: 0, scale: 0.9, x: -40},
-     next: {y: -30, opacity: 0.5, scale: 0.9, x: -40},
+     enter: {y: -90, opacity: 0, scale: 0.9},
+     next: {y: -30, opacity: 0.5, scale: 0.9},
      current: {y: 0, opacity: 1, scale: 1, x: 0},
-     prev: {y: 30, opacity: 0.5, scale: 0.9, x: -40},
-     exit: {y: 90, opacity: 0, scale: 0.9, x: -40}
+     prev: {y: 30, opacity: 0.5, scale: 0.9},
+     exit: {y: 90, opacity: 0, scale: 0.9}
  };
  
  const transition = {
@@ -42,7 +42,7 @@ import {motion, AnimatePresence} from 'framer-motion';
      const cycle = Date.now();
  
      return (
-         <div className={`w-full relative h-32 overflow-hidden flex items-center ${className}`}>
+         <div className={`w-[250px] justify-center relative h-32 flex items-center overflow-hidden ${className}`}>
              <AnimatePresence mode="sync">
                  {[
                      {id: `prev-${cycle}`, text: texts[prevIndex], position: 'prev'},
@@ -51,7 +51,7 @@ import {motion, AnimatePresence} from 'framer-motion';
                  ].map(item => (
                      <motion.div
                          key={item.id}
-                         className="absolute w-full"
+                         className="absolute"
                          initial="enter"
                          animate={item.position}
                          exit="exit"
