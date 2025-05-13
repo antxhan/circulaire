@@ -9,7 +9,7 @@ export default function Wrapper({
 }) {
   return (
     <div className={`max-w-screen-xl mx-auto`}>
-      <div className={`max-w-screen-lg mx-auto px-4 ${className}`}>
+      <div className={`max-w-screen-xl mx-auto px-4 ${className}`}>
         {children}
       </div>
       {fullWidthComponent}
