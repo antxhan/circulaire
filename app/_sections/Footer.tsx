@@ -3,6 +3,7 @@ import { footerLinks } from "../_constants/navLinks";
 import FooterNavSection from "../_components/FooterNavSection";
 import Wrapper from "../_components/Wrapper";
 import Image from "next/image";
+import { ThemeToggle } from "../_components/Toggle/ThemeToggle";
 
 export default function Footer() {
   return (
@@ -41,7 +42,7 @@ export default function Footer() {
             <span className="max-sm:text-center text-balance">{`© ${new Date().getFullYear()} Circulaire. All rights reserved.`}</span>
           </div>
 
-          <div className="w-32 bg-pink-400">Toggle</div>
+          <ThemeToggle/>
         </div>
       </Wrapper>
     </footer>
