@@ -20,7 +20,7 @@ export const TailorMadeFor = () => (
       lg:grid-cols-2
     "
     >
-      <H2 className="text-center lg:text-right">Tailor-made for</H2>
+      <H2 className="!text-center lg:!text-right">Tailor-made for</H2>
       <TextRotator texts={customerCategories} />
     </div>
   </Section>
