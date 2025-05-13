@@ -1,4 +1,4 @@
-import ExternalLink from "../_components/ExternalLink";
+import ExternalLink from "../_components/Links/ExternalLink";
 import { footerLinks } from "../_constants/navLinks";
 import FooterNavSection from "../_components/FooterNavSection";
 import Wrapper from "../_components/Wrapper";
