@@ -1,5 +1,6 @@
 import Link from "next/link";
 import ExternalLink from "../_components/ExternalLink";
+import OnPageLink from "./OnPageLink";
 
 type Link = {
   href: string;
@@ -24,6 +25,10 @@ export default function FooterNavSection({
               <ExternalLink key={link.href} href={link.href}>
                 {link.label}
               </ExternalLink>
+            ) : link.href.startsWith("#") ? (
+              <OnPageLink key={link.href} href={link.href}>
+                {link.label}
+              </OnPageLink>
             ) : (
               <Link key={link.href} href={link.href}>
                 {link.label}
