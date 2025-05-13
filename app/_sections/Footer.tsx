@@ -15,7 +15,7 @@ export default function Footer() {
           </div>
           <div
             className={`flex flex-wrap
-              gap-x-32 gap-y-8 justify-center w-full sm:justify-end max-sm:flex-row-reverse`}
+              gap-x-32 gap-y-8 justify-center w-full sm:justify-end`}
           >
             {footerLinks.map(({ category, links }) => (
               <FooterNavSection
