@@ -1,5 +1,6 @@
 import TestimonialCard from "../_components/TestimonialCard";
 import Section from "../_components/Section";
+import H2 from "../_components/H2";
 
 const testimonials = [
   {
@@ -28,6 +29,9 @@ const testimonials = [
 export default function Testimonials() {
   return (
     <Section>
+      <H2 className="ml-10 text-center md:text-left text-3xl md:text-5xl">
+        What our users are saying
+      </H2>
       <div className="mt-12 flex flex-col md:flex-row justify-center gap-4 mx-auto">
         {testimonials.map((testimonials, index) => (
           <TestimonialCard key={index} {...testimonials} />
