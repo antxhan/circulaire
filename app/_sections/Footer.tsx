@@ -7,7 +7,7 @@ import { ThemeToggle } from "../_components/Toggle/ThemeToggle";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-neutral-300 pt-12">
+    <footer className="border-t border-neutral-300 dark:border-neutral-700 pt-12">
       <Wrapper className="flex flex-col gap-12">
         <div className="flex max-sm:flex-col-reverse gap-12 justify-between max-sm:items-center">
           <div className="h-[8rem] w-[8rem] bg-gray-500 aspect-square">
@@ -42,7 +42,7 @@ export default function Footer() {
             <span className="max-sm:text-center text-balance">{`© ${new Date().getFullYear()} Circulaire. All rights reserved.`}</span>
           </div>
 
-          <ThemeToggle/>
+          <ThemeToggle />
         </div>
       </Wrapper>
     </footer>
