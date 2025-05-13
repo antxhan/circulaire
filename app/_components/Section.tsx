@@ -1,10 +1,8 @@
-import H2 from "./H2";
 import Wrapper from "./Wrapper";
 
 export default function Section({
-  title,
   fullWidthComponent,
-  className,
+  className = "",
   children,
 }: {
   title?: string;
@@ -14,10 +12,7 @@ export default function Section({
 }) {
   return (
     <section className={`py-16 ${className}`}>
-      <Wrapper fullWidthComponent={fullWidthComponent}>
-        {title && <H2 text={title} />}
-        {children}
-      </Wrapper>
+      <Wrapper fullWidthComponent={fullWidthComponent}>{children}</Wrapper>
     </section>
   );
 }
