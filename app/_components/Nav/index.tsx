@@ -31,7 +31,7 @@ export default function Nav() {
       <dialog
         aria-hidden={!isOpen}
         ref={ref}
-        className="hidden min-w-full min-h-full px-4 max-md:open:flex flex-col pb-4 bg-neutral-100/80 backdrop-blur-md"
+        className="hidden min-w-full min-h-full px-4 max-md:open:flex flex-col pb-4 bg-neutral-100/80 backdrop-blur-md dark:text-white"
       >
         <div className="flex items-center justify-between py-9">
           <Link href={links.home} className="hover:!text-neutral-900">
