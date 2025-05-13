@@ -1,7 +1,7 @@
 import Section from "../_components/Section";
 import H2 from "../_components/H2";
 import { StepToggle } from "../_components/Toggle/StepToggle";
-import VideoPlayer from "../_components/Video";
+import Video from "../_components/Video";
 import BookDemoButton from "../_components/BookDemoButton";
 
 export default function HowItWorks() {
@@ -13,7 +13,7 @@ export default function HowItWorks() {
         <BookDemoButton />
       </div>
       <div>
-        <VideoPlayer />
+        <Video />
       </div>
     </Section>
   );
