@@ -29,6 +29,7 @@ export default function FooterAnimation({
           fontFamily: "var(--font-accent)",
         }}
       >
+    
         <svg viewBox="0 0 100 100" className="w-full h-full">
           <defs>
             <path
