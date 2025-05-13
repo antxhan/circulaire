@@ -1,6 +1,6 @@
 'use client'
 import { useState } from 'react';
-import { Toggle } from './Toggle';
+import { Toggle } from '.';
 import MoonIcon from '@/app/_icons/MoonIcon';
 import SunIcon from '@/app/_icons/SunIcon';
 import ComputerIcon from '@/app/_icons/ComputerIcon';

@@ -1,11 +1,6 @@
 'use client'
 import { useState } from 'react';
-import { Toggle } from './Toggle';
-
-type StepToggleProps = {
-    activeStep: string;
-    onClick?: () => void;
-}
+import { Toggle } from '.';
 
 const steps = [
     {id: '1', content: '1. Step'},
@@ -13,12 +8,11 @@ const steps = [
     {id: '3', content: '3. Step'}
 ];
 
-export const StepToggle = ({activeStep = '1', onClick}: StepToggleProps) => {
-     const [currentStep, setCurrentStep] = useState(activeStep ?? '1');
+export const StepToggle = () => {
+     const [currentStep, setCurrentStep] = useState('1');
     
     const onClickInternal = (id: string) => {
         setCurrentStep(id)
-        onClick?.()
     }
 
      return (
