@@ -3,6 +3,7 @@ import AnalyticsIcon from "../_icons/AnalyticsIcon";
 import DatabaseIcon from "../_icons/DatabaseIcon";
 import PointerIcon from "../_icons/PointerIcon";
 import Section from "../_components/Section";
+import H2 from "../_components/H2";
 
 export default function Features() {
   const features = [
@@ -47,14 +48,14 @@ export default function Features() {
 
   return (
     <Section className="py-12">
-      <h2 className="text-2xl font-bold mb-8 text-[var(--clr-neutral-900)]">
-        Where pricing meets precision
-      </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="text-left">
+        <H2 text="Where pricing meets precision" />
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
         {features.map((feature, index) => (
           <Card
             key={index}
-            className="bg-[var(--clr-neutral-100)] text-[var(--clr-neutral-900)] p-6 rounded-lg shadow-lg"
+            className="w-full bg-neutral-100 text-neutral-900 p-6"
           >
             {feature.icon ? <feature.icon /> : null}
             <h3 className="font-semibold mt-4">
@@ -65,9 +66,7 @@ export default function Features() {
                 </span>
               )}
             </h3>
-            <p className="text-sm text-[var(--clr-neutral-400)]">
-              {feature.description}
-            </p>
+            <p className="text-sm text-neutral-400">{feature.description}</p>
           </Card>
         ))}
       </div>
