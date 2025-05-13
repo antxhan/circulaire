@@ -3,12 +3,15 @@ import AnalyticsIcon from "../_icons/AnalyticsIcon";
 import DatabaseIcon from "../_icons/DatabaseIcon";
 import PointerIcon from "../_icons/PointerIcon";
 import Section from "../_components/Section";
+import APIIcon from "../_icons/APIIcon";
+import BellIcon from "../_icons/BellIcon";
+import DollarIcon from "../_icons/DollarIcon";
 import H2 from "../_components/H2";
 
 export default function Features() {
   const features = [
     {
-      icon: null,
+      icon: PointerIcon,
       title: "Easy-to-use interface",
       description:
         "Quickly get market insights for watches, handbags, clothing, sneakers, and accessories.",
@@ -20,7 +23,7 @@ export default function Features() {
         "Access niche sources and enable them easily for better market insights.",
     },
     {
-      icon: null,
+      icon: APIIcon,
       title: "Powerful APIs",
       description:
         "Don’t need our UI? No problem. Let our API integrate with your business flows.",
@@ -33,13 +36,13 @@ export default function Features() {
       label: "Coming soon",
     },
     {
-      icon: null,
+      icon: BellIcon,
       title: "Pricing alerts",
       description:
         "Follow specific products and receive real-time pricing trend alerts.",
     },
     {
-      icon: PointerIcon,
+      icon: DollarIcon,
       title: "Automated pricing",
       description:
         "Integrate with our API to automate pricing of your inventory, supporting all major ERPs.",
@@ -48,25 +51,29 @@ export default function Features() {
 
   return (
     <Section className="py-12">
-      <div className="text-left">
-        <H2 text="Where pricing meets precision" />
+      <div className="text-center">
+        <H2>Where pricing meets precision</H2>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
-        {features.map((feature, index) => (
+        {features.map((feature) => (
           <Card
-            key={index}
+            key={feature.title}
             className="w-full bg-neutral-100 text-neutral-900 p-6"
           >
-            {feature.icon ? <feature.icon /> : null}
-            <h3 className="font-semibold mt-4">
+            <span className="inline-block mb-2">
+              <feature.icon className="w-7 h-7 text-primary-600" />
+            </span>
+            <h3 className="font-semibold mt-4 flex items-center gap-2">
               {feature.title}
               {feature.label && (
-                <span className="text-xs text-white bg-black px-1 ml-1">
+                <span className="text-xs rounded bg-black text-white px-2 py-0.5 ml-2">
                   {feature.label}
                 </span>
               )}
             </h3>
-            <p className="text-sm text-neutral-400">{feature.description}</p>
+            <p className="text-sm text-neutral-500 mt-2">
+              {feature.description}
+            </p>
           </Card>
         ))}
       </div>
