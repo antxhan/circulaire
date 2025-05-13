@@ -1,15 +1,15 @@
 import { links } from "./links";
 
 const navLinks = {
-  about: { label: "About", href: "#about" },
+  about: { label: "About", href: links.about },
   api: {
     label: "API",
-    href: links.signIn,
+    href: links.api,
   },
-  features: { label: "Features", href: "#features" },
+  features: { label: "Features", href: links.features },
   press: {
     label: "Press",
-    href: "https://journal.gocirculaire.com/circulaire-revolutionerar-prissattning-av-second-hand-produkter-med-ai-tar-in-kapital-och-starker-styrelsen/",
+    href: links.press,
   },
 } as const;
 
