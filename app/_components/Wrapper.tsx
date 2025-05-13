@@ -8,7 +8,7 @@ export default function Wrapper({
   className?: string;
 }) {
   return (
-    <div className={`max-w-screen-xl mx-auto`}>
+    <div className={`mx-auto`}>
       <div className={`max-w-screen-xl mx-auto px-4 ${className}`}>
         {children}
       </div>
