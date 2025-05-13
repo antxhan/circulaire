@@ -34,7 +34,7 @@ const teamMembers = [
 
 export default function WeAreCirculaire() {
   return (
-      <Section className="py-16">
+      <Section>
       <H2 className="mb-12">We are Circulaire</H2>
 
       <div className="grid grid-cols-1 font-accent lg:grid-cols-[1fr_1px_1fr] gap-12">
