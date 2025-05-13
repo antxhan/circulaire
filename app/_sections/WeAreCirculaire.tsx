@@ -1,41 +1,54 @@
 import ProfileCard from "../_components/ProfileCard";
 import BookDemoButton from "../_components/BookDemoButton";
+import Section from "../_components/Section";
+import H2 from "../_components/H2";
+import { links } from "../_constants/links";
+
+const teamMembers = [
+  {
+    name: "Emil",
+    role: "Co-Founder & CEO",
+    imageSrc: "/people/emil.webp",
+    contacts: [
+      {
+        icon: "/socials/linkedin.svg",
+        label: "LinkedIn",
+        url: links.EmilLinkedin,
+      },
+    ],
+  },
+  {
+    name: "Andreas",
+    role: "Co-Founder & CPO",
+    imageSrc: "/people/andreas.webp",
+    contacts: [
+      {
+        icon: "/socials/linkedin.svg",
+        label: "LinkedIn",
+        url: links.AndreasLinkedin,
+      },
+    ],
+  },
+];
+
 
 export default function WeAreCirculaire() {
   return (
-    <section className="max-w-7xl mx-auto px-4 py-16">
-      <h2 className="text-4xl md:text-5xl font-bold font-accent mb-12">
-        We are Circulaire
-      </h2>
+      <Section className="py-16">
+      <H2 className="mb-12">We are Circulaire</H2>
 
       <div className="grid grid-cols-1 font-accent lg:grid-cols-[1fr_1px_1fr] gap-12">
         <div className="flex flex-col gap-12">
-          <ProfileCard
-            name="Emil Köpcke"
-            role="Co-Founder & CEO"
-            imageSrc="/people/emil.webp"
-            contacts={[
-              {
-                icon: "/socials/linkedin.svg",
-                label: "LinkedIn",
-                url: "https://www.linkedin.com/in/emil-kopcke/",
-              },
-            ]}
-          />
-          <ProfileCard
-            name="Andreas Nylander"
-            role="Co-Founder & CPO"
-            imageSrc="/people/andreas.webp"
-            contacts={[
-              {
-                icon: "/socials/linkedin.svg",
-                label: "LinkedIn",
-                url: "https://www.linkedin.com/in/andreasnylander/",
-              },
-            ]}
-          />
+          {teamMembers.map((member, index) => (
+            <ProfileCard
+              key={index}
+              name={member.name}
+              role={member.role}
+              imageSrc={member.imageSrc}
+              contacts={member.contacts}
+            />
+          ))}
         </div>
-
 
         <div className="hidden lg:block h-full w-px bg-neutral-300 opacity-33" />
 
@@ -45,7 +58,7 @@ export default function WeAreCirculaire() {
             <h3 className="text-xl font-bold mb-4 font-accent">
               We are passionate about empowering businesses with data-driven pricing insights.
             </h3>
-            <p className="text-base text-neutral-700 leading-relaxed">
+            <p className="text-base text-neutral-700">
               With years of experience in eCommerce and AI-powered analytics, we founded <em>Circulaire</em> to help businesses optimize their pricing strategies in the second-hand market.
             </p>
           </div>
@@ -53,6 +66,6 @@ export default function WeAreCirculaire() {
           <BookDemoButton />
         </div>
       </div>
-    </section>
+    </Section>
   );
 }
