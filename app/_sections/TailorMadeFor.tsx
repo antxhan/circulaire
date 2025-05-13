@@ -21,7 +21,7 @@ export const TailorMadeFor = () => (
     "
     >
       <H2 className="text-center lg:text-right">Tailor-made for</H2>
-      <TextRotator texts={customerCategories} className="text-blue" />
+      <TextRotator texts={customerCategories} />
     </div>
   </Section>
 );

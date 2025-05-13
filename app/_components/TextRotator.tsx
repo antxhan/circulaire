@@ -77,11 +77,11 @@ export const TextRotator = ({
             transition={transition}
           >
             {item.position === "current" ? (
-              <div className="text-5xl font-bold text-blue-600 font-accent text-center lg:text-left">
+              <div className="text-5xl font-bold text-blue font-accent text-center lg:text-left">
                 {item.text}
               </div>
             ) : (
-              <div className="text-4xl font-semibold text-gray-400 font-accent text-center lg:text-left">
+              <div className="text-4xl font-semibold text-neutral-400 font-accent text-center lg:text-left">
                 {item.text}
               </div>
             )}
