@@ -1,6 +1,6 @@
-import H2 from "../_components/H2";
-import Section from "../_components/Section";
-import { TextRotator } from "../_components/TextRotator";
+import H2 from "../../_components/H2";
+import Section from "../../_components/Section";
+import { TextRotator } from "./TextRotator";
 
 const customerCategories = [
   "Second Hand Shops",
