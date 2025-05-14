@@ -39,7 +39,7 @@ export default function Demo() {
           currentValue={currentVideo}
           name="video"
         />
-        <BookDemoButton />
+        <BookDemoButton className="!hidden md:!inline-flex" />
       </div>
       <div className=" bg-neutral-100 border border-neutral-300 dark:border-neutral-800 rounded-4xl aspect-[5/3]">
         <video
