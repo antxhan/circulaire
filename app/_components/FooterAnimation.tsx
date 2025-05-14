@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { useMemo } from "react";
+import GlyphLogo from "../_icons/GlyphLogo";
 
 interface FooterAnimationProps {
   speed?: number;
@@ -55,13 +55,7 @@ export default function FooterAnimation({
       </div>
 
       <div className="absolute">
-        <Image
-          src="/logos/logo2.svg"
-          alt="Logo"
-          width={size / 3}
-          height={size / 3}
-          priority
-        />
+        <GlyphLogo className="text-neutral-500"/>
       </div>
     </div>
   );

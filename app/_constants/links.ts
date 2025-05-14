@@ -14,4 +14,5 @@ export const links = {
   AndreasLinkedin: "https://www.linkedin.com/in/andreasnylander/",
   EmilLinkedin: "https://www.linkedin.com/in/emil-kopcke/",
   update: journalUrl,
+  companyLinkedin: "https://www.linkedin.com/company/circulaire"
 };
