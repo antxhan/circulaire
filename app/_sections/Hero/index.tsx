@@ -13,33 +13,37 @@ export default function HeroSection() {
     "Improve your margins and increase your sales. Become data-driven in your pricing decisions.",
   ];
   return (
-    <Section>
-      <div className="flex flex-col md:flex-row">
-        <div className="flex-1 ml-6 sm:ml-12 lg:ml-25">
-          <BlogUpdate text="Circulair March Update" link={links.update} />
-          <h1 className="font-accent font-bold text-5xl mt-12 leading-tight">
+    <Section
+      wrapperClassName="flex !max-w-6xl gap-16 justify-between 
+      max-md:flex-col max-md:items-center
+    "
+    >
+      <div className="flex flex-col max-md:items-center gap-12">
+        <BlogUpdate text="Circulair March Update" link={links.update} />
+        <div>
+          <h1 className="font-accent font-bold text-5xl leading-tight max-md:text-center text-balance">
             The #1 Real-Time
             <br /> Pricing Insights Platform
           </h1>
-          <ul className="mt-4 space-y-2 font-body list-disc list-outside pl-4 max-w-lg">
+          <ul className="space-y-2 font-body list-disc list-outside pl-4 max-w-lg">
             {bulletPoints.map((bulletPoint, index) => (
               <li key={index} className="text-pretty">
                 {bulletPoint}
               </li>
             ))}
           </ul>
-          <div className="mt-8 flex flex-row gap-4">
-            <BookDemoButton />
-            <ButtonLink
-              href={links.demo}
-              text="How it Works"
-              icon={<VideoIcon />}
-            />
-          </div>
         </div>
-        <div className="flex-1 flex justify-center items-center max-w-xs sm:max-w-md md:max-w-lg mr-8 overflow-hidden">
-          <HeroAnimation />
+        <div className="flex gap-4">
+          <BookDemoButton />
+          <ButtonLink
+            href={links.demo}
+            text="How it Works"
+            icon={<VideoIcon />}
+          />
         </div>
+      </div>
+      <div className="flex justify-center items-center max-sm:min-w-full sm:max-w-md md:max-w-lg overflow-hidden">
+        <HeroAnimation />
       </div>
     </Section>
   );
