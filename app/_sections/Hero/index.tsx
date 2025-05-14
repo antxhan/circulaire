@@ -14,6 +14,7 @@ export default function HeroSection() {
   ];
   return (
     <Section
+      className="max-md:pt-8"
       wrapperClassName="flex !max-w-6xl gap-16 justify-between 
       max-md:flex-col max-md:items-center
     "

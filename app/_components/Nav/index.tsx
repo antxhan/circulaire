@@ -33,7 +33,7 @@ export default function Nav() {
         ref={ref}
         className="hidden min-w-full min-h-full px-4 max-md:open:flex flex-col pb-4 bg-neutral-100/80 dark:bg-black/80 backdrop-blur-md dark:text-white"
       >
-        <div className="flex items-center justify-between py-9">
+        <div className="flex items-center justify-between py-5">
           <Link
             href={links.home}
             className="hover:!text-neutral-900 dark:hover:!text-white"
