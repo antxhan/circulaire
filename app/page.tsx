@@ -1,8 +1,9 @@
 import Features from "./_sections/Features";
-import HelloWorld from "./_sections/HelloWorld";
-import { TailorMadeFor } from "./_sections/TailorMadeFor";
+import HelloWorld from "./_sections/HelloWorld";;
 import Testimonials from "./_sections/Testimonials";
 import HowItWorks from "./_sections/HowItWorks";
+import { TailorMadeFor } from "./_sections/TailorMadeFor";
+import WeAreCirculaire from "./_sections/WeAreCirculaire";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <Features />
       <HowItWorks />
       <TailorMadeFor />
+      <WeAreCirculaire />
       <Testimonials />
     </div>
   );
