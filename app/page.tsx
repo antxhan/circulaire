@@ -2,9 +2,9 @@ import Features from "./_sections/Features";
 import Testimonials from "./_sections/Testimonials";
 import Demo from "./_sections/Demo";
 import { TailorMadeFor } from "./_sections/TailorMadeFor";
-import WeAreCirculaire from "./_sections/WeAreCirculaire";
+import About from "./_sections/About";
 import Hero from "./_sections/Hero";
-import LogoBannerSection from "./_sections/LogoBanner";
+import Integrations from "./_sections/Integrations";
 
 export default function Home() {
   return (
@@ -14,8 +14,8 @@ export default function Home() {
       <Features />
       <Demo />
       <Testimonials />
-      <LogoBannerSection />
-      <WeAreCirculaire />
+      <Integrations />
+      <About />
     </div>
   );
 }

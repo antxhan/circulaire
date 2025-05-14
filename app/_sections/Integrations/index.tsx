@@ -1,6 +1,6 @@
-import Section from "../_components/Section";
-import H2 from "../_components/H2";
-import LogoBannerScroll from "../_components/LogoBannerScroll";
+import Section from "../../_components/Section";
+import H2 from "../../_components/H2";
+import LogoBannerScroll from "./LogoBannerScroll";
 
 export default function LogoBannerSection() {
   return (
