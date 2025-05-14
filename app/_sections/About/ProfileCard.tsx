@@ -1,5 +1,5 @@
 import Image from "next/image";
-import ExternalLink from "./Links/ExternalLink";
+import ExternalLink from "@/app/_components/Links/ExternalLink";
 
 interface ContactDetails {
   icon: React.ReactNode;
@@ -35,7 +35,7 @@ export default function ProfileCard({
       <div className="gap-2">
         <h3 className=" text-2xl font-bold font-accent">{name}</h3>
         <p className="italic">{role}</p>
-        
+
         <div>
           {contacts.map((contact) => (
             <ExternalLink key={contact.label} href={contact.url}>

@@ -1,9 +1,9 @@
-import ProfileCard from "../_components/ProfileCard";
-import BookDemoButton from "../_components/BookDemoButton";
-import Section from "../_components/Section";
-import H2 from "../_components/H2";
-import { links } from "../_constants/links";
-import LinkedinIcon from "../_icons/LinkedinIcon";
+import BookDemoButton from "@/app/_components/BookDemoButton";
+import H2 from "@/app/_components/H2";
+import ProfileCard from "./ProfileCard";
+import Section from "@/app/_components/Section";
+import { links } from "@/app/_constants/links";
+import LinkedinIcon from "@/app/_icons/LinkedinIcon";
 
 const teamMembers = [
   {
@@ -32,7 +32,7 @@ const teamMembers = [
   },
 ];
 
-export default function WeAreCirculaire() {
+export default function About() {
   return (
     <Section id="about">
       <H2 className="mb-12">We are Circulaire</H2>
