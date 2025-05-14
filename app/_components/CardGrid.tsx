@@ -5,22 +5,24 @@ export default function CardGrid({
   contents,
 }: {
   className?: string;
-  contents: React.ReactNode[];
+  contents: { order?: string; content: React.ReactNode }[];
 }) {
   return (
     <div
       className="
           grid 
-          grid-cols-[repeat(auto-fit,minmax(24rem,1fr))] 
+          grid-cols-[repeat(auto-fit,minmax(min(24rem,100%),1fr))] 
           auto-rows-fr
           gap-4"
     >
       {contents.map((content, index) => (
         <Card
           key={index}
-          className={`items-center gap-4 grid min-h-full p-4 ${className}`}
+          className={`items-center gap-4 grid min-h-full p-4 ${className} ${
+            content.order && content.order
+          }`}
         >
-          {content}
+          {content.content}
         </Card>
       ))}
     </div>

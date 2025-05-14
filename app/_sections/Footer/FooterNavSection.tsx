@@ -1,5 +1,5 @@
 import Link from "next/link";
-import A from "./Links/A";
+import A from "@/app/_components/Links/A";
 
 type Link = {
   href: string;

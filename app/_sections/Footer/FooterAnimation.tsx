@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { useMemo } from "react";
+import GlyphLogo from "@/app/_icons/GlyphLogo";
 
 interface FooterAnimationProps {
   speed?: number;
@@ -13,14 +13,14 @@ export default function FooterAnimation({
   const radius = 40;
   const circumference = useMemo(() => 2 * Math.PI * radius, [radius]);
 
-  const repeatedText = "CIRCULAIRE     CIRCULAIRE     CIRCULAIRE     CIRCULAIRE\u00A0";
+  const repeatedText =
+    "CIRCULAIRE     CIRCULAIRE     CIRCULAIRE     CIRCULAIRE\u00A0";
 
   return (
     <div
       className="relative flex items-center justify-center"
       style={{ width: size, height: size }}
     >
-
       <div
         className="absolute w-full h-full"
         style={{
@@ -55,13 +55,7 @@ export default function FooterAnimation({
       </div>
 
       <div className="absolute">
-        <Image
-          src="/logos/logo2.svg"
-          alt="Logo"
-          width={size / 3}
-          height={size / 3}
-          priority
-        />
+        <GlyphLogo className="text-neutral-500" />
       </div>
     </div>
   );

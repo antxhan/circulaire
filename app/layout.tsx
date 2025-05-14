@@ -26,7 +26,7 @@ export default function RootLayout({
       lang="en"
       className={`
         ${inter.variable} ${leagueSpartan.variable} font-body 
-        bg-neutral-100 text-black dark:bg-black dark:text-white`}
+        bg-neutral-100 text-black dark:bg-black dark:text-white !scroll-smooth`}
       suppressHydrationWarning
     >
       <body className={`antialiased`}>
