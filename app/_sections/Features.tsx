@@ -72,7 +72,7 @@ export default function Features() {
         Where pricing meets precision
       </H2>
       <CardGrid
-        className="grid-cols-[min(100%,100px)_1fr] grid-rows-[20px_auto]"
+        className="grid-cols-[min(100%,100px)_1fr] grid-rows-[auto_auto]"
         contents={features.map((feature) => {
           return {
             order: feature.order,
@@ -91,14 +91,14 @@ export default function Features() {
                 </div>
 
                 <div className="gap-2 grid grid-rows-subgrid row-span-2">
-                  <header className="flex items-center text-nowrap">
+                  <header className="flex items-center leading-[0.5] flex-wrap justify-between">
                     <h3
                       className={`font-bold font-accent text-xl ${feature.textColor} dark:text-white`}
                     >
                       {feature.title}
                     </h3>
                     {feature.label && (
-                      <span className="text-xs font-bold bg-neutral-200 dark:bg-black py-1 px-2 rounded-full ml-auto">
+                      <span className="text-xs font-bold bg-neutral-200 dark:bg-black py-1 px-2 rounded-full">
                         {feature.label}
                       </span>
                     )}

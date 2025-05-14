@@ -11,7 +11,7 @@ export default function CardGrid({
     <div
       className="
           grid 
-          grid-cols-[repeat(auto-fit,minmax(24rem,1fr))] 
+          grid-cols-[repeat(auto-fit,minmax(min(24rem,100%),1fr))] 
           auto-rows-fr
           gap-4"
     >
