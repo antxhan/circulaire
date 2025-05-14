@@ -3,13 +3,6 @@ type ToggleItemProps = {
   content: React.ReactNode;
 };
 
-type ToggleProps = {
-  items: ToggleItemProps[];
-  activeId: string;
-  onClick: (id: string) => void;
-  className?: string;
-};
-
 const getItemClasses = (isActive: boolean) => `
 flex items-center justify-center px-6 rounded-full !h-11 transition-all duration-200 ease-in-out cursor-pointer
 ${
@@ -21,24 +14,40 @@ ${
 
 export const Toggle = ({
   items,
-  activeId,
-  onClick,
+  currentValue,
+  onChange,
+  name,
   className = "",
-}: ToggleProps) => {
+}: {
+  items: ToggleItemProps[];
+  currentValue: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  name: string;
+  className?: string;
+}) => {
   return (
-    <div
-      className={`flex p-2 items-center rounded-full font-accent font-bold w-fit bg-neutral-200 text-gray-800 dark:border dark:bg-neutral-000 dark:text-neutral-600 dark:border-neutral-700 ${className}`}
+    <fieldset
+      className={`flex p-2 items-center rounded-full font-accent font-bold w-fit bg-neutral-200 text-gray-800 border border-neutral-200 dark:bg-neutral-900 dark:text-neutral-600 dark:border-neutral-800 ${className}`}
     >
       {items.map((item) => (
-        <button
+        <label
           key={item.id}
-          type="button"
-          className={getItemClasses(activeId === item.id)}
-          onClick={() => onClick(item.id)}
+          htmlFor={item.id}
+          className={getItemClasses(currentValue === item.id)}
         >
+          <input
+            key={item.id}
+            className="sr-only"
+            onChange={onChange}
+            type="radio"
+            name={name}
+            id={item.id}
+            value={item.id}
+            defaultChecked={currentValue === item.id}
+          />
           {item.content}
-        </button>
+        </label>
       ))}
-    </div>
+    </fieldset>
   );
 };
