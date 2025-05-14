@@ -4,7 +4,8 @@ type ToggleItemProps = {
 };
 
 const getItemClasses = (isActive: boolean) => `
-flex items-center justify-center px-6 rounded-full !h-11 transition-all duration-200 ease-in-out cursor-pointer
+flex items-center justify-center flex-1 text-center px-4 py-2 rounded-full !h-11 transition-all duration-200 ease-in-out cursor-pointer
+  whitespace-normal break-words leading-tight
 ${
   isActive
     ? "bg-blue text-white"
