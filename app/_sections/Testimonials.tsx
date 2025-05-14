@@ -29,7 +29,7 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <Section id="testimonials">
+    <Section>
       <H2 className="mb-12">What our users are saying</H2>
       <CardGrid
         className="grid-cols-1 grid-rows-[auto_1fr]"

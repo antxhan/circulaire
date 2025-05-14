@@ -8,7 +8,7 @@ import VideoIcon from "../_icons/VideoIcon";
 
 export default function HeroSection() {
   return (
-    <Section id="hero">
+    <Section>
       <div className="flex flex-col md:flex-row">
         <div className="flex-1 ml-6 sm:ml-12 lg:ml-25">
           <BlogUpdate text="Circulair March Update" link="#" />
