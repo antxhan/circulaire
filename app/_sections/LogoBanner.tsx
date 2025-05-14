@@ -4,11 +4,10 @@ import LogoBannerScroll from "../_components/LogoBannerScroll";
 
 export default function LogoBannerSection() {
   return (
-    <Section>
+    <Section fullWidthComponent={<LogoBannerScroll />}>
       <H2 className="mb-12 md:ml-6 text-center md:text-left text-3xl md:text-5xl">
-        PlaceHolder Title
+        Integrate with
       </H2>
-      <LogoBannerScroll />
     </Section>
   );
 }
