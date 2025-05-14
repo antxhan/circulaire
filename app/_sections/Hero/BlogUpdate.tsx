@@ -1,5 +1,5 @@
-import ExternalLinkIcon from "../_icons/ExternalLinkIcon";
-import ExternalLink from "./Links/ExternalLink";
+import ExternalLink from "@/app/_components/Links/ExternalLink";
+import ExternalLinkIcon from "@/app/_icons/ExternalLinkIcon";
 
 export default function BlogUpdate({
   text,

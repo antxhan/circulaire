@@ -33,7 +33,7 @@ const teamMembers = [
 
 export default function WeAreCirculaire() {
   return (
-    <Section>
+    <Section id="about">
       <H2 className="mb-12">We are Circulaire</H2>
 
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_1px_1fr] gap-12">
