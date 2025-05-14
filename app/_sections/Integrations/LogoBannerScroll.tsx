@@ -16,7 +16,7 @@ export default function LogoBannerScroll({
   ];
 
   return (
-    <section className={`w-full overflow-hidden bg-white ${className}`}>
+    <section className={`w-full overflow-hidden ${className}`}>
       <div
         className="flex animate-scroll whitespace-nowrap w-max"
         style={{ animation: "var(--animate-scroll-horizontal)" }}

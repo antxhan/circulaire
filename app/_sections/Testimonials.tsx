@@ -33,32 +33,36 @@ export default function Testimonials() {
       <H2 className="mb-12">What our users are saying</H2>
       <CardGrid
         className="grid-cols-1 grid-rows-[auto_1fr]"
-        contents={testimonials.map((testimonial) => (
-          <>
-            <div className="flex items-center gap-2">
-              <div className="w-9 h-9 rounded-full overflow-hidden">
-                <Image
-                  src={testimonial.imageSrc}
-                  alt={`${testimonial.name}'s profile picture`}
-                  width={36}
-                  height={36}
-                  className="object-cover w-full h-full"
-                />
-              </div>
-              <div className="leading-[1]">
-                <h6 className="text-xl font-bold font-accent leading-[1]">
-                  {testimonial.name}
-                </h6>
-                <span className="text-sm font-normal">
-                  {testimonial.profession}
-                </span>
-              </div>
-            </div>
-            <p className="h-full text-xl italic leading-[1.1] text-pretty text-neutral-600 dark:text-white">
-              &quot;{testimonial.comment}&quot;
-            </p>
-          </>
-        ))}
+        contents={testimonials.map((testimonial) => {
+          return {
+            content: (
+              <>
+                <div className="flex items-center gap-2">
+                  <div className="w-9 h-9 rounded-full overflow-hidden">
+                    <Image
+                      src={testimonial.imageSrc}
+                      alt={`${testimonial.name}'s profile picture`}
+                      width={36}
+                      height={36}
+                      className="object-cover w-full h-full"
+                    />
+                  </div>
+                  <div className="leading-[1]">
+                    <h6 className="text-xl font-bold font-accent leading-[1]">
+                      {testimonial.name}
+                    </h6>
+                    <span className="text-sm font-normal">
+                      {testimonial.profession}
+                    </span>
+                  </div>
+                </div>
+                <p className="h-full text-xl italic leading-[1.1] text-pretty text-neutral-600 dark:text-white">
+                  &quot;{testimonial.comment}&quot;
+                </p>
+              </>
+            ),
+          };
+        })}
       />
     </Section>
   );
