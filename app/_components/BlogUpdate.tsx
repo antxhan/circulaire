@@ -11,7 +11,7 @@ export default function BlogUpdate({
   return (
     <ExternalLink
       href={link}
-      className="bg-neutral-000 border-neutral-300 border-1 flex items-center w-max px-4 py-1 rounded-full gap-2 hover:bg-neutral-200 duration-300"
+      className="bg-white hover:bg-neutral-100 dark:bg-neutral-900 dark:hover:bg-neutral-800 dark:hover:!text-white  border-neutral-300 dark:border-neutral-800 border-1 flex items-center w-max px-4 py-1 rounded-full gap-2 transition-all"
     >
       <span>✨</span>
       <span>{text}</span>
