@@ -7,10 +7,14 @@ import BookDemoButton from "../_components/BookDemoButton";
 export default function HowItWorks() {
   return (
     <Section>
-      <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-10">
-        <H2 className="text-left w-full md:w-auto">How it works</H2>
-        <StepToggle />
-        <BookDemoButton />
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
+        <H2 className="col-span-1 text-left">How it works</H2>
+        <div className="col-span-1 flex justify-center">
+          <StepToggle />
+        </div>
+        <div className="flex justify-end w-full md:w-auto">
+          <BookDemoButton />
+        </div>
       </div>
       <div>
         <Video />
