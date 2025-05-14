@@ -3,7 +3,7 @@ import BookDemoButton from "../_components/BookDemoButton";
 import Section from "../_components/Section";
 import H2 from "../_components/H2";
 import { links } from "../_constants/links";
-import LinkeinIcon from "../_icons/LinkeinIcon";
+import LinkedinIcon from "../_icons/LinkedinIcon";
 
 const teamMembers = [
   {
@@ -12,7 +12,7 @@ const teamMembers = [
     imageSrc: "/people/emil.webp",
     contacts: [
       {
-        icon: <LinkeinIcon />,
+        icon: <LinkedinIcon />,
         label: "LinkedIn",
         url: links.EmilLinkedin,
       },
@@ -24,7 +24,7 @@ const teamMembers = [
     imageSrc: "/people/andreas.webp",
     contacts: [
       {
-        icon: <LinkeinIcon />,
+        icon: <LinkedinIcon />,
         label: "LinkedIn",
         url: links.AndreasLinkedin,
       },

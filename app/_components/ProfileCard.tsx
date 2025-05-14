@@ -35,20 +35,11 @@ export default function ProfileCard({
       <div className="gap-2">
         <h3 className=" text-2xl font-bold font-accent">{name}</h3>
         <p className="italic">{role}</p>
-
+        
         <div>
           {contacts.map((contact) => (
             <ExternalLink key={contact.label} href={contact.url}>
-              {typeof contact.icon === 'string' ? 
-                  <Image
-                    src={contact.icon}
-                    alt={contact.label}
-                    width={24}
-                    height={24}
-                  />
-                : 
-                  contact.icon
-                }
+              {contact.icon}
             </ExternalLink>
           ))}
         </div>

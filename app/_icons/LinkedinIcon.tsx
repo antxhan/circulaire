@@ -1,4 +1,4 @@
-export default function LinkeinIcon({
+export default function LinkedinIcon({
     className = "",
   }: {
     className?: string;
