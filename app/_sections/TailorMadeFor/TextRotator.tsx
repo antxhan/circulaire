@@ -19,15 +19,15 @@ const variants = {
 
 const transition = {
   type: "spring",
-  stiffness: 100,
-  damping: 30,
-  mass: 0.8,
-  duration: 0.8,
+  stiffness: 150,
+  damping: 20,
+  mass: 0.65,
+  duration: 0.5,
 };
 
 export const TextRotator = ({
   texts,
-  interval = 3000,
+  interval = 1500,
   className = "",
 }: TextRotatorProps) => {
   const [index, setIndex] = useState(0);
