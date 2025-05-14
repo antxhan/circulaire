@@ -1,4 +1,4 @@
-export default function VideoPlayer() {
+export default function Video() {
   return (
     <video
       controls

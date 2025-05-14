@@ -1,5 +1,5 @@
 import Image from "next/image";
-import ExternalLink from "./ExternalLink";
+import ExternalLink from "./Links/ExternalLink";
 
 interface ContactDetails {
   icon: string;

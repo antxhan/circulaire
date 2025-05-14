@@ -1,4 +1,4 @@
-import ButtonLink from "./ButtonLink";
+import ButtonLink from "./Links/ButtonLink";
 import CalendarIcon from "../_icons/CalendarIcon";
 import { links } from "../_constants/links";
 
