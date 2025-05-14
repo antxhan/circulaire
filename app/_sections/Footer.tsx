@@ -3,7 +3,7 @@ import { footerLinks } from "../_constants/navLinks";
 import FooterNavSection from "../_components/FooterNavSection";
 import Wrapper from "../_components/Wrapper";
 import Image from "next/image";
-import { ThemeToggle } from "../_components/Toggle/ThemeToggle";
+import ThemeToggle from "../_components/Toggle/ThemeToggle";
 
 export default function Footer() {
   return (
