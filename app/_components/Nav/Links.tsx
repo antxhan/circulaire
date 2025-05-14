@@ -36,6 +36,7 @@ export default function Links({
             href={links.booking}
             text="Book a demo"
             onClick={onLinkClick}
+            className="!bg-blue !border-blue hover:!bg-blue-600 !text-white hover:!text-white"
           />
         </li>
       </ul>

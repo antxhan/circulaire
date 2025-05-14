@@ -1,4 +1,6 @@
 const signInUrl = "https://app.gocirculaire.com/login/";
+const journalUrl =
+  "https://journal.gocirculaire.com/circulaire-revolutionerar-prissattning-av-second-hand-produkter-med-ai-tar-in-kapital-och-starker-styrelsen/";
 
 export const links = {
   about: "#about",
@@ -8,8 +10,8 @@ export const links = {
   features: "#features",
   home: "/",
   signIn: signInUrl,
-  press:
-    "https://journal.gocirculaire.com/circulaire-revolutionerar-prissattning-av-second-hand-produkter-med-ai-tar-in-kapital-och-starker-styrelsen/",
+  press: journalUrl,
   AndreasLinkedin: "https://www.linkedin.com/in/andreasnylander/",
   EmilLinkedin: "https://www.linkedin.com/in/emil-kopcke/",
+  update: journalUrl,
 };
