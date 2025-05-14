@@ -10,9 +10,7 @@ export default function HowItWorks() {
       <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-10">
         <H2 className="text-left w-full md:w-auto">How it works</H2>
         <StepToggle />
-        <div className="hidden md:block">
-          <BookDemoButton />
-        </div>
+        <BookDemoButton className="!hidden md:!inline-flex" />
       </div>
       <div>
         <Video />
