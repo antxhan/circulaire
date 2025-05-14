@@ -16,7 +16,7 @@ export default function Section({
 }) {
   return (
     <section
-      className={`py-28 scroll-mt-16 ${className}`}
+      className={`py-28 md:scroll-mt-4 ${className}`}
       {...(id ? { id: id } : {})}
     >
       <Wrapper
