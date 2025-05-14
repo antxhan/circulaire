@@ -31,15 +31,19 @@ export default function Demo() {
 
   return (
     <Section id="demo">
-      <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-10">
-        <H2 className="text-left w-full md:w-auto">How it works</H2>
-        <Toggle
-          items={videos}
-          onChange={handleChange}
-          currentValue={currentVideo}
-          name="video"
-        />
-        <BookDemoButton className="!hidden md:!inline-flex" />
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
+        <H2 className="col-span-1 text-left">How it works</H2>
+        <div className="col-span-1 flex justify-center">
+          <Toggle
+            items={videos}
+            onChange={handleChange}
+            currentValue={currentVideo}
+            name="video"
+          />
+        </div>
+        <div className="flex justify-end w-full md:w-auto">
+          <BookDemoButton className="!hidden md:!inline-flex" />
+        </div>
       </div>
       <div className=" bg-neutral-100 border border-neutral-300 dark:border-neutral-800 rounded-4xl aspect-[5/3]">
         <video
