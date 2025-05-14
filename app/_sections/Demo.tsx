@@ -30,7 +30,7 @@ export default function Demo() {
   }, [currentVideo]);
 
   return (
-    <Section>
+    <Section id="demo">
       <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-10">
         <H2 className="text-left w-full md:w-auto">How it works</H2>
         <Toggle
