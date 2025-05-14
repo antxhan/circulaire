@@ -7,6 +7,11 @@ import { links } from "../../_constants/links";
 import VideoIcon from "../../_icons/VideoIcon";
 
 export default function HeroSection() {
+  const bulletPoints = [
+    "AI-powered accurate, modern and powerful platform for second-hand market data.",
+    "Available through flexible APIs or user interface.",
+    "Improve your margins and increase your sales. Become data-driven in your pricing decisions.",
+  ];
   return (
     <Section>
       <div className="flex flex-col md:flex-row">
@@ -17,15 +22,11 @@ export default function HeroSection() {
             <br /> Pricing Insights Platform
           </h1>
           <ul className="mt-4 space-y-2 font-body list-disc list-outside pl-4 max-w-lg">
-            <li>
-              AI-powered accurate, modern and powerful platform for second-hand
-              market data.
-            </li>
-            <li>Available through flexible APIs or user interface.</li>
-            <li>
-              Improve your margins and increase your sales. Become data-driven
-              in your pricing decisions.
-            </li>
+            {bulletPoints.map((bulletPoint, index) => (
+              <li key={index} className="text-pretty">
+                {bulletPoint}
+              </li>
+            ))}
           </ul>
           <div className="mt-8 flex flex-row gap-4">
             <BookDemoButton />
