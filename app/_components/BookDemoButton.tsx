@@ -12,7 +12,7 @@ export default function BookDemoButton({
       href={links.booking}
       text="Book a Demo"
       icon={<CalendarIcon />}
-      className={className}
+      className={`text-white !bg-blue hover:!bg-blue-600 hover:!text-white !border-blue hover:!border-blue-600 transition-all ${className}`}
     />
   );
 }

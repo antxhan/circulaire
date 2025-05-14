@@ -15,7 +15,7 @@ export default function ButtonLink({
 }) {
   return (
     <A
-      className={`inline-flex items-center gap-2.5 px-4.5 h-11 rounded-full font-accent font-bold text-base text-nowrap text-white bg-blue hover:bg-blue-600 hover:!text-white transition-all ${className}`}
+      className={`hover:!text-black dark:hover:!text-white bg-white dark:bg-neutral-900 hover:bg-neutral-100 dark:hover:bg-neutral-800 inline-flex items-center gap-2.5 px-4.5 h-11 rounded-full font-accent font-bold text-base text-nowrap border border-neutral-300 dark:border-neutral-800 transition-all ${className}`}
       href={href}
       onClick={onClick}
     >
