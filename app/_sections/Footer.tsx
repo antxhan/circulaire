@@ -23,7 +23,6 @@ export default function Footer() {
               />
             ))}
           </div>
-
         </div>
         <div className="flex justify-between gap-8 flex-wrap max-sm:items-center max-sm:flex-col">
           <div className="flex gap-4 flex-col max-sm:items-center">
@@ -37,7 +36,6 @@ export default function Footer() {
               {`© ${new Date().getFullYear()} Circulaire. All rights reserved.`}
             </span>
           </div>
-
           <ThemeToggle />
         </div>
       </Wrapper>

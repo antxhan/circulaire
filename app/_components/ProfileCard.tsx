@@ -42,7 +42,7 @@ export default function ProfileCard({
               {typeof contact.icon === 'string' ? 
                   <Image
                     src={contact.icon}
-                    alt={contact?.label ?? ''}
+                    alt={contact.label}
                     width={24}
                     height={24}
                   />
