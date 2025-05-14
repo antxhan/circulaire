@@ -1,4 +1,3 @@
-import Card from "../_components/Card";
 import AnalyticsIcon from "../_icons/AnalyticsIcon";
 import DatabaseIcon from "../_icons/DatabaseIcon";
 import PointerIcon from "../_icons/PointerIcon";
@@ -7,12 +6,13 @@ import APIIcon from "../_icons/APIIcon";
 import BellIcon from "../_icons/BellIcon";
 import DollarIcon from "../_icons/DollarIcon";
 import H2 from "../_components/H2";
+import CardGrid from "../_components/CardGrid";
 
 export default function Features() {
   const features = [
     {
       icon: <PointerIcon width={48} height={48} strokeWidth={1} />,
-      bgColor: "bg-green",
+      bgColor: "bg-green dark:bg-green-dark",
       textColor: "text-green",
       title: "Easy-to-use interface",
       description:
@@ -20,7 +20,7 @@ export default function Features() {
     },
     {
       icon: <DatabaseIcon width={48} height={48} strokeWidth={1} />,
-      bgColor: "bg-red",
+      bgColor: "bg-red dark:bg-red-dark",
       textColor: "text-red",
       title: "Plug & Play data sources",
       description:
@@ -28,7 +28,7 @@ export default function Features() {
     },
     {
       icon: <APIIcon width={48} height={48} strokeWidth={1} />,
-      bgColor: "bg-teal",
+      bgColor: "bg-teal dark:bg-teal-dark",
       textColor: "text-teal",
       title: "Powerful APIs",
       description:
@@ -36,7 +36,7 @@ export default function Features() {
     },
     {
       icon: <AnalyticsIcon width={48} height={48} strokeWidth={1} />,
-      bgColor: "bg-teal",
+      bgColor: "bg-teal dark:bg-teal-dark",
       textColor: "text-teal",
       title: "Analytics",
       description:
@@ -45,7 +45,7 @@ export default function Features() {
     },
     {
       icon: <BellIcon width={48} height={48} strokeWidth={1} />,
-      bgColor: "bg-yellow",
+      bgColor: "bg-yellow dark:bg-yellow-dark",
       textColor: "text-yellow",
       title: "Pricing alerts",
       description:
@@ -53,7 +53,7 @@ export default function Features() {
     },
     {
       icon: <DollarIcon width={48} height={48} strokeWidth={1} />,
-      bgColor: "bg-green",
+      bgColor: "bg-green dark:bg-green-dark",
       textColor: "text-green",
       title: "Automated pricing",
       description:
@@ -65,18 +65,10 @@ export default function Features() {
       <H2 className="text-center md:text-left">
         Where pricing meets precision
       </H2>
-      <div
-        className="
-        grid 
-        grid-cols-[repeat(auto-fit,minmax(24rem,1fr))] 
-        auto-rows-fr
-        gap-4"
-      >
-        {features.map((feature) => (
-          <Card
-            key={feature.title}
-            className="items-center gap-4 grid grid-cols-[min(100%,100px)_1fr] grid-rows-[20px_auto] min-h-full p-4"
-          >
+      <CardGrid
+        className="grid-cols-[min(100%,100px)_1fr] grid-rows-[20px_auto]"
+        contents={features.map((feature) => (
+          <>
             <div
               className={`
               rounded-full text-white ${feature.bgColor}
@@ -92,7 +84,7 @@ export default function Features() {
             <div className="gap-2 grid grid-rows-subgrid row-span-2">
               <header className="flex items-center text-nowrap">
                 <h3
-                  className={`font-bold text-xl ${feature.textColor} dark:text-white`}
+                  className={`font-bold font-accent text-xl ${feature.textColor} dark:text-white`}
                 >
                   {feature.title}
                 </h3>
@@ -106,11 +98,9 @@ export default function Features() {
                 {feature.description}
               </p>
             </div>
-          </Card>
+          </>
         ))}
-      </div>
+      />
     </Section>
   );
 }
-
-// grid-rows-[20px_auto]

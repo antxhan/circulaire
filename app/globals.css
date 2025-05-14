@@ -1,35 +1,46 @@
 @import "tailwindcss";
+@variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
 :root {
   /* NEUTRAL COLORS */
-  --clr-neutral-900: #000000;
+  /* --clr-neutral-900: #000000;
   --clr-neutral-400: #a0a0a0;
-  --clr-neutral-300: #bfbfbf; /* strokes */
+  --clr-neutral-300: #bfbfbf;
   --clr-neutral-200: #efefef;
-  --clr-neutral-100: #fbfbfb; /* main bg */
-  --clr-neutral-000: #fff;
+  --clr-neutral-100: #fbfbfb;
+  --clr-neutral-000: #fff; */
+
+  /* --clr-background: #fbfbfb; */
+  /* --clr-foreground: #000; */
 
   /* ACCENT COLORS */
   --clr-blue: #1a58bb;
   --clr-green: #11a665;
+  --clr-green-dark: #084a2d;
   --clr-teal: #1ab2cd;
+  --clr-teal-dark: #0e6271;
   --clr-red: #bc2f00;
+  --clr-red-dark: #651a01;
   --clr-yellow: #e99b1f;
+  --clr-yellow-dark: #be7e16;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     /* DARK MODE NEUTRAL COLORS */
-    --clr-neutral-000: #171717;
+    /* --clr-neutral-000: #171717;
     --clr-neutral-100: #000000;
-    --clr-neutral-900: #ffffff;
+    --clr-neutral-900: #ffffff; */
+
+    /* --clr-background: #000; */
+    /* --clr-foreground: #fff; */
 
     /* DARK MODE ACCENT COLORS */
-    --clr-blue: #1a58bb;
+    /* --clr-blue: #1a58bb;
     --clr-green: #084a2d;
     --clr-teal: #0e6271;
     --clr-red: #651a01;
-    --clr-yellow: #be7e16;
+    --clr-yellow: #be7e16; */
   }
   a:hover {
     color: var(--color-blue-400) !important;
@@ -38,19 +49,22 @@
 
 @theme inline {
   /* COLORS */
-  --color-background: var(--clr-neutral-100);
-  --color-foreground: var(--clr-neutral-900);
   --color-blue: var(--clr-blue);
   --color-green: var(--clr-green);
+  --color-green-dark: var(--clr-green-dark);
   --color-teal: var(--clr-teal);
+  --color-teal-dark: var(--clr-teal-dark);
   --color-red: var(--clr-red);
+  --color-red-dark: var(--clr-red-dark);
   --color-yellow: var(--clr-yellow);
-  --color-neutral-900: var(--clr-neutral-900);
+  --color-yellow-dark: var(--clr-yellow-dark);
+
+  /* --color-neutral-900: var(--clr-neutral-900);
   --color-neutral-400: var(--clr-neutral-400);
   --color-neutral-300: var(--clr-neutral-300);
   --color-neutral-200: var(--clr-neutral-200);
   --color-neutral-100: var(--clr-neutral-100);
-  --color-neutral-000: var(--clr-neutral-000);
+  --color-neutral-000: var(--clr-neutral-000); */
 
   /* FONTS */
   --font-body: var(--font-inter);
@@ -86,11 +100,6 @@
       transform: translateX(-50%);
     }
   }
-}
-
-body {
-  background: var(--clr-neutral-100);
-  color: var(--clr-neutral-900);
 }
 
 a {

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import ExternalLink from "../_components/ExternalLink";
+import A from "./Links/A";
 
 type Link = {
   href: string;
@@ -18,18 +18,11 @@ export default function FooterNavSection({
       <h4 className="font-bold font-accent text-xl">{heading}</h4>
       <ul>
         <li className="flex flex-col gap-2">
-          {links.map((link) =>
-            link.href.startsWith("http") ? (
-              // meaning it is an external link
-              <ExternalLink key={link.href} href={link.href}>
-                {link.label}
-              </ExternalLink>
-            ) : (
-              <Link key={link.href} href={link.href}>
-                {link.label}
-              </Link>
-            )
-          )}
+          {links.map((link) => (
+            <A key={link.href} href={link.href}>
+              {link.label}
+            </A>
+          ))}
         </li>
       </ul>
     </div>

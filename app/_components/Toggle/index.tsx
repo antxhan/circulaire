@@ -1,42 +1,53 @@
 type ToggleItemProps = {
-    id: string;
-    content: React.ReactNode;
-};
-
-type ToggleProps = {
-    items: ToggleItemProps[];
-    activeId: string;
-    onClick: (id: string) => void;
-    className?: string;
+  id: string;
+  content: React.ReactNode;
 };
 
 const getItemClasses = (isActive: boolean) => `
-flex items-center justify-center px-6 h-full rounded-full transition-all duration-200 ease-in-out cursor-pointer
+flex items-center justify-center px-6 rounded-full !h-11 transition-all duration-200 ease-in-out cursor-pointer
 ${
-    isActive
-        ? 'bg-blue-500 text-white dark:bg-blue-600'
-        : 'hover:bg-opacity-10 hover:bg-gray-500'
+  isActive
+    ? "bg-blue text-white"
+    : "hover:bg-opacity-10 hover:text-blue-500 dark:hover:text-white"
 }
 `;
 
 export const Toggle = ({
-    items,
-    activeId,
-    onClick,
-    className = ''
-}: ToggleProps) => {
-    return (
-        <div className={`flex items-center h-[72px] rounded-full p-1 w-fit bg-gray-100 text-gray-800 border border-gray-100 dark:bg-gray-800 dark:text-white dark:border-gray-100 ${className}`}>
-            {items.map(item => (
-                <button
-                    key={item.id}
-                    type="button"
-                    className={getItemClasses(activeId === item.id)}
-                    onClick={() => onClick(item.id)}
-                >
-                    {item.content}
-                </button>
-            ))}
-        </div>
-    );
+  items,
+  currentValue,
+  onChange,
+  name,
+  className = "",
+}: {
+  items: ToggleItemProps[];
+  currentValue: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  name: string;
+  className?: string;
+}) => {
+  return (
+    <fieldset
+      className={`flex p-2 items-center rounded-full font-accent font-bold w-fit bg-neutral-200 text-gray-800 border border-neutral-200 dark:bg-neutral-900 dark:text-neutral-600 dark:border-neutral-800 ${className}`}
+    >
+      {items.map((item) => (
+        <label
+          key={item.id}
+          htmlFor={item.id}
+          className={getItemClasses(currentValue === item.id)}
+        >
+          <input
+            key={item.id}
+            className="sr-only"
+            onChange={onChange}
+            type="radio"
+            name={name}
+            id={item.id}
+            value={item.id}
+            defaultChecked={currentValue === item.id}
+          />
+          {item.content}
+        </label>
+      ))}
+    </fieldset>
+  );
 };
