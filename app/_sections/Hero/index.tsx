@@ -1,10 +1,10 @@
-import BookDemoButton from "../_components/BookDemoButton";
-import ButtonLink from "../_components/Links/ButtonLink";
-import BlogUpdate from "../_components/BlogUpdate";
-import HeroAnimation from "../_components/HeroAnimation";
-import Section from "../_components/Section";
-import { links } from "../_constants/links";
-import VideoIcon from "../_icons/VideoIcon";
+import BookDemoButton from "../../_components/BookDemoButton";
+import ButtonLink from "../../_components/Links/ButtonLink";
+import BlogUpdate from "./BlogUpdate";
+import HeroAnimation from "./HeroAnimation";
+import Section from "../../_components/Section";
+import { links } from "../../_constants/links";
+import VideoIcon from "../../_icons/VideoIcon";
 
 export default function HeroSection() {
   return (
