@@ -4,8 +4,8 @@ type ToggleItemProps = {
 };
 
 const getItemClasses = (isActive: boolean) => `
-flex items-center justify-center flex-1 text-center px-4 py-2 rounded-full !h-11 transition-all duration-200 ease-in-out cursor-pointer
-  whitespace-normal break-words leading-tight
+flex items-center justify-center flex-1 text-center px-4 gap-2 py-2 rounded-full !h-11 transition-all duration-200 ease-in-out cursor-pointer
+  text-nowrap break-words leading-tight
 ${
   isActive
     ? "bg-blue text-white"
@@ -28,7 +28,7 @@ export const Toggle = ({
 }) => {
   return (
     <fieldset
-      className={`flex p-2 items-center rounded-full font-accent font-bold w-fit bg-neutral-200 text-gray-800 border border-neutral-200 dark:bg-neutral-900 dark:text-neutral-600 dark:border-neutral-800 ${className}`}
+      className={`flex p-2 items-center rounded-full font-accent font-bold w-fit bg-neutral-200 text-gray-800 border border-neutral-200 dark:bg-neutral-900 dark:text-neutral-500 dark:border-neutral-800 ${className}`}
     >
       {items.map((item) => (
         <label

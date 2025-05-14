@@ -8,9 +8,18 @@ import { Toggle } from "../_components/Toggle";
 
 export default function Demo() {
   const videos = [
-    { id: "/videos/video1.mp4", content: "1. Select Category" },
-    { id: "/videos/video2.mp4", content: "2. Search Keywords" },
-    { id: "/videos/video3.mp4", content: "3. Evaluate Price" },
+    {
+      id: "/videos/video1.mp4",
+      content: "1. Category",
+    },
+    {
+      id: "/videos/video2.mp4",
+      content: "2. Keywords",
+    },
+    {
+      id: "/videos/video3.mp4",
+      content: "3. Price",
+    },
   ];
 
   const [currentVideo, setCurrentVideo] = useState(videos[0].id);
@@ -31,9 +40,9 @@ export default function Demo() {
 
   return (
     <Section id="demo">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
-        <H2 className="col-span-1 text-left">How it works</H2>
-        <div className="col-span-1 flex justify-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:mb-12 items-center">
+        <H2 className="col-span-1 text-center md:text-left">How it works</H2>
+        <div className="col-span-1 flex justify-center items-center md:justify-end">
           <Toggle
             items={videos}
             onChange={handleChange}
@@ -41,8 +50,8 @@ export default function Demo() {
             name="video"
           />
         </div>
-        <div className="flex justify-end w-full md:w-auto">
-          <BookDemoButton className="!hidden md:!inline-flex" />
+        <div className="flex justify-end items-center w-full md:w-auto">
+          <BookDemoButton className="!hidden lg:!inline-flex" />
         </div>
       </div>
       <div className=" bg-neutral-100 border border-neutral-300 dark:border-neutral-800 rounded-4xl aspect-[5/3]">
