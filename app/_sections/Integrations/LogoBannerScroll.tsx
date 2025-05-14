@@ -33,7 +33,7 @@ export default function LogoBannerScroll({
                 return (
                   <div
                     key={index}
-                    className={`flex items-center justify-center w-[120px] h-[60px] overflow-hidden ${
+                    className={`flex items-center justify-center w-[120px] h-[60px] overflow-hidden dark:filter dark:brightness-0 dark:invert ${
                       isOpenAI || isGemini ? "" : "mr-8"
                     }`}
                   >
