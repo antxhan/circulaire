@@ -36,7 +36,7 @@ export default function ProfileCard({
         <h3 className=" text-2xl font-bold font-accent">{name}</h3>
         <p className="italic">{role}</p>
 
-        <div>
+        <div className="flex gap-4">
           {contacts.map((contact) => (
             <ExternalLink key={contact.label} href={contact.url}>
               {contact.icon}
