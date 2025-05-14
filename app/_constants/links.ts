@@ -4,6 +4,7 @@ export const links = {
   about: "#about",
   api: signInUrl,
   booking: "https://calendar.app.google/wtUEmDXJM6m6hm4bA",
+  demo: "#demo",
   features: "#features",
   home: "/",
   signIn: signInUrl,
