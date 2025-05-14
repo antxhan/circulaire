@@ -4,18 +4,16 @@ import FooterNavSection from "../_components/FooterNavSection";
 import Wrapper from "../_components/Wrapper";
 import ThemeToggle from "../_components/Toggle/ThemeToggle";
 import LinkeinIcon from "../_icons/LinkeinIcon";
+import FooterAnimation from "../_components/FooterAnimation";
 
 export default function Footer() {
   return (
     <footer className="border-t border-neutral-300 dark:border-neutral-700 py-12">
       <Wrapper className="flex flex-col gap-12">
         <div className="flex max-sm:flex-col-reverse gap-12 justify-between max-sm:items-center">
-          <div className="h-[8rem] w-[8rem] bg-gray-500 aspect-square">
-            animation
-          </div>
+          <FooterAnimation size={122} />
           <div
-            className={`flex flex-wrap
-              gap-x-32 gap-y-8 justify-center w-full sm:justify-end`}
+            className="grid grid-cols-2 gap-y-8 gap-x-32 justify-items-center sm:justify-items-end"
           >
             {footerLinks.map(({ category, links }) => (
               <FooterNavSection
@@ -25,6 +23,7 @@ export default function Footer() {
               />
             ))}
           </div>
+
         </div>
         <div className="flex justify-between gap-8 flex-wrap max-sm:items-center max-sm:flex-col">
           <div className="flex gap-4 flex-col max-sm:items-center">
