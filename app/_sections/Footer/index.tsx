@@ -1,11 +1,11 @@
-import FooterAnimation from "./FooterAnimation";
-import FooterNavSection from "./FooterNavSection";
 import ExternalLink from "@/app/_components/Links/ExternalLink";
 import ThemeToggle from "@/app/_components/Toggle/ThemeToggle";
 import Wrapper from "@/app/_components/Wrapper";
 import { links } from "@/app/_constants/links";
 import { footerLinks } from "@/app/_constants/navLinks";
 import LinkedinIcon from "@/app/_icons/LinkedinIcon";
+import FooterAnimation from "./FooterAnimation";
+import FooterNavSection from "./FooterNavSection";
 
 export default function Footer() {
   return (

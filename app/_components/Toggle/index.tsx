@@ -4,7 +4,7 @@ type ToggleItemProps = {
 };
 
 const getItemClasses = (isActive: boolean) => `
-flex items-center justify-center px-6 rounded-full !h-11 transition-all duration-200 ease-in-out cursor-pointer
+flex items-center justify-center whitespace-nowrap px-6 rounded-full !h-11 transition-all duration-200 ease-in-out cursor-pointer;
 ${
   isActive
     ? "bg-blue text-white"
@@ -30,7 +30,7 @@ export const Toggle = ({
       className={`flex p-2 items-center rounded-full font-accent font-bold w-fit bg-neutral-200 text-gray-800 border border-neutral-200 dark:bg-neutral-900 dark:text-neutral-600 dark:border-neutral-800 ${className}`}
     >
       {items.map((item) => (
-        <label
+        <button
           key={item.id}
           htmlFor={item.id}
           className={getItemClasses(currentValue === item.id)}
@@ -46,7 +46,7 @@ export const Toggle = ({
             defaultChecked={currentValue === item.id}
           />
           {item.content}
-        </label>
+        </button>
       ))}
     </fieldset>
   );
