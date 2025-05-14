@@ -11,7 +11,7 @@ export default function HeroSection() {
     <Section>
       <div className="flex flex-col md:flex-row">
         <div className="flex-1 ml-6 sm:ml-12 lg:ml-25">
-          <BlogUpdate text="Circulair March Update" link="#" />
+          <BlogUpdate text="Circulair March Update" link={links.update} />
           <h1 className="font-accent font-bold text-5xl mt-12 leading-tight">
             The #1 Real-Time
             <br /> Pricing Insights Platform
@@ -33,7 +33,6 @@ export default function HeroSection() {
               href={links.demo}
               text="How it Works"
               icon={<VideoIcon />}
-              className="!bg-black border border-white/25"
             />
           </div>
         </div>

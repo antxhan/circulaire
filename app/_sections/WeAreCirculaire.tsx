@@ -31,13 +31,12 @@ const teamMembers = [
   },
 ];
 
-
 export default function WeAreCirculaire() {
   return (
-      <Section>
+    <Section>
       <H2 className="mb-12">We are Circulaire</H2>
 
-      <div className="grid grid-cols-1 font-accent lg:grid-cols-[1fr_1px_1fr] gap-12">
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_1px_1fr] gap-12">
         <div className="flex flex-col gap-12">
           {teamMembers.map((member, index) => (
             <ProfileCard
@@ -50,16 +49,18 @@ export default function WeAreCirculaire() {
           ))}
         </div>
 
-        <div className="hidden lg:block h-full w-px bg-neutral-300 opacity-33" />
-
+        <div className="hidden lg:block h-full w-px bg-neutral-300 dark:bg-neutral-700" />
 
         <div className="flex flex-col justify-between gap-8">
           <div>
-            <h3 className="text-xl font-bold mb-4 font-accent">
-              We are passionate about empowering businesses with data-driven pricing insights.
+            <h3 className="text-xl font-bold mb-4 font-accent text-pretty">
+              We are passionate about empowering businesses with data-driven
+              pricing insights.
             </h3>
-            <p className="text-base text-neutral-700">
-              With years of experience in eCommerce and AI-powered analytics, we founded <em>Circulaire</em> to help businesses optimize their pricing strategies in the second-hand market.
+            <p className="text-base text-neutral-700 dark:text-neutral-400 text-pretty">
+              With years of experience in eCommerce and AI-powered analytics, we
+              founded <em>Circulaire</em> to help businesses optimize their
+              pricing strategies in the second-hand market.
             </p>
           </div>
 
