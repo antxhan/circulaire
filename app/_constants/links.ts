@@ -10,4 +10,6 @@ export const links = {
   signIn: signInUrl,
   press:
     "https://journal.gocirculaire.com/circulaire-revolutionerar-prissattning-av-second-hand-produkter-med-ai-tar-in-kapital-och-starker-styrelsen/",
+  AndreasLinkedin: "https://www.linkedin.com/in/andreasnylander/",
+  EmilLinkedin: "https://www.linkedin.com/in/emil-kopcke/",
 };
