@@ -27,7 +27,7 @@ const transition = {
 
 export const TextRotator = ({
   texts,
-  interval = 3000,
+  interval = 2000,
   className = "",
 }: TextRotatorProps) => {
   const [index, setIndex] = useState(0);
