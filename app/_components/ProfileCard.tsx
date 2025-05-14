@@ -22,7 +22,7 @@ export default function ProfileCard({
 }: ProfileCardProps) {
   return (
     <div className="flex items-center gap-8">
-      <div className="w-[150px] h-[150px] rounded-full bg-neutral-300">
+      <div className="w-[150px] h-[150px] aspect-square rounded-full bg-neutral-300 dark:bg-neutral-700 overflow-hidden">
         <Image
           src={imageSrc}
           alt={name}
@@ -34,7 +34,7 @@ export default function ProfileCard({
 
       <div className="gap-2">
         <h3 className=" text-2xl font-bold font-accent">{name}</h3>
-        <p className=" text-base italic">{role}</p>
+        <p className="italic">{role}</p>
 
         <div>
           {contacts.map((contact) => (

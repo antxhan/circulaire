@@ -12,7 +12,7 @@ export default function Features() {
   const features = [
     {
       icon: <PointerIcon width={48} height={48} strokeWidth={1} />,
-      bgColor: "bg-green",
+      bgColor: "bg-green dark:bg-green-dark",
       textColor: "text-green",
       title: "Easy-to-use interface",
       description:
@@ -20,7 +20,7 @@ export default function Features() {
     },
     {
       icon: <DatabaseIcon width={48} height={48} strokeWidth={1} />,
-      bgColor: "bg-red",
+      bgColor: "bg-red dark:bg-red-dark",
       textColor: "text-red",
       title: "Plug & Play data sources",
       description:
@@ -28,7 +28,7 @@ export default function Features() {
     },
     {
       icon: <APIIcon width={48} height={48} strokeWidth={1} />,
-      bgColor: "bg-teal",
+      bgColor: "bg-teal dark:bg-teal-dark",
       textColor: "text-teal",
       title: "Powerful APIs",
       description:
@@ -36,7 +36,7 @@ export default function Features() {
     },
     {
       icon: <AnalyticsIcon width={48} height={48} strokeWidth={1} />,
-      bgColor: "bg-teal",
+      bgColor: "bg-teal dark:bg-teal-dark",
       textColor: "text-teal",
       title: "Analytics",
       description:
@@ -45,7 +45,7 @@ export default function Features() {
     },
     {
       icon: <BellIcon width={48} height={48} strokeWidth={1} />,
-      bgColor: "bg-yellow",
+      bgColor: "bg-yellow dark:bg-yellow-dark",
       textColor: "text-yellow",
       title: "Pricing alerts",
       description:
@@ -53,7 +53,7 @@ export default function Features() {
     },
     {
       icon: <DollarIcon width={48} height={48} strokeWidth={1} />,
-      bgColor: "bg-green",
+      bgColor: "bg-green dark:bg-green-dark",
       textColor: "text-green",
       title: "Automated pricing",
       description:

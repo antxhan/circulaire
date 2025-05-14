@@ -54,7 +54,7 @@ export default function Testimonials() {
                 </span>
               </div>
             </div>
-            <p className="h-full text-xl italic leading-[1.1] text-pretty text-neutral-700 dark:text-white">
+            <p className="h-full text-xl italic leading-[1.1] text-pretty text-neutral-600 dark:text-white">
               &quot;{testimonial.comment}&quot;
             </p>
           </>
