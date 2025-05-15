@@ -11,9 +11,13 @@ import XIcon from "@/app/_icons/XIcon";
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
 
+  const ref = useRef<HTMLDialogElement>(null);
+  const dummyRef = useRef<HTMLDivElement>(null); // to remove mobile autofocus
+
   const openNav = () => {
     ref.current?.showModal();
     setIsOpen(true);
+    setTimeout(() => dummyRef.current?.focus(), 0); // to remove mobile autofocus
   };
 
   const closeNav = () => {
@@ -21,7 +25,6 @@ export default function Nav() {
     setIsOpen(false);
   };
 
-  const ref = useRef<HTMLDialogElement>(null);
   return (
     <>
       <Links className="hidden md:flex" ariaLabel={"Main navigation"} />
@@ -37,6 +40,12 @@ export default function Nav() {
         open:animate-fade-in animate-fade-out
         "
       >
+        <div
+          tabIndex={-1}
+          ref={dummyRef}
+          className="sr-only"
+          aria-hidden="true"
+        />
         <div className="flex items-center justify-between py-5">
           <Link
             href={links.home}
