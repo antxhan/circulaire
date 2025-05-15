@@ -6,13 +6,22 @@ import { Toggle } from ".";
 import ComputerIcon from "@/app/_icons/ComputerIcon";
 import SunIcon from "@/app/_icons/SunIcon";
 import MoonIcon from "@/app/_icons/MoonIcon";
+import MobileIcon from "@/app/_icons/MobileIcon";
 
 export default function ThemeToggle() {
   const [mounted, setMounted] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const { theme, setTheme } = useTheme();
+
+  const handleResize = () => {
+    setIsMobile(window.innerWidth < 640);
+  };
 
   useEffect(() => {
     setMounted(true);
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   if (!mounted) {
@@ -26,7 +35,7 @@ export default function ThemeToggle() {
   const items = [
     {
       id: "system",
-      content: <ComputerIcon />,
+      content: isMobile ? <MobileIcon /> : <ComputerIcon />,
     },
     {
       id: "light",

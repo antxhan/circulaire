@@ -38,7 +38,7 @@ export default function ProfileCard({
 
         <div className="flex gap-4">
           {contacts.map((contact) => (
-            <ExternalLink key={contact.label} href={contact.url}>
+            <ExternalLink key={contact.label} href={contact.url} aria-label={contact.label}>
               {contact.icon}
             </ExternalLink>
           ))}

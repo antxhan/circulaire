@@ -38,6 +38,7 @@ export default function Nav() {
             href={links.home}
             className="hover:!text-neutral-900 dark:hover:!text-white"
             onClick={closeNav}
+            aria-label="Home"
           >
             <WordMarkLogo />
           </Link>
