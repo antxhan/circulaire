@@ -31,7 +31,11 @@ export default function Nav() {
       <dialog
         aria-hidden={!isOpen}
         ref={ref}
-        className="hidden min-w-full min-h-full px-4 max-md:open:flex flex-col pb-4 bg-neutral-100/80 dark:bg-black/80 backdrop-blur-md dark:text-white"
+        className="
+        hidden min-w-[100vw] min-h-[100vh] px-4 max-md:open:flex flex-col pb-4 !inset-0
+        bg-neutral-100/80 dark:bg-black/80 backdrop-blur-md dark:text-white
+        open:animate-fade-in animate-fade-out
+        "
       >
         <div className="flex items-center justify-between py-5">
           <Link
