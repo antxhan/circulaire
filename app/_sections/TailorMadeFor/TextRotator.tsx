@@ -81,7 +81,7 @@ export const TextRotator = ({
                 {item.text}
               </div>
             ) : (
-              <div className="text-4xl font-semibold text-neutral-200 font-accent text-center lg:text-left">
+              <div className="text-4xl font-semibold text-neutral-400 dark:text-neutral-200 font-accent text-center lg:text-left">
                 {item.text}
               </div>
             )}
