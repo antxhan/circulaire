@@ -61,7 +61,9 @@ export default function Demo() {
           loop
           muted
           autoPlay
-          className="rounded-[inherit] w-full h-full overflow-hidden"
+          playsInline
+          controls={false}
+          className="rounded-[inherit] w-full h-full overflow-hidden pointer-events-none"
         >
           <source src={currentVideo} type="video/mp4" />
           Your browser does not support the video tag.
