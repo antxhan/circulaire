@@ -38,7 +38,7 @@ export default function About() {
       <H2 className="mb-12">We are Circulaire</H2>
 
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_1px_1fr] gap-12">
-        <div className="flex flex-col gap-12">
+        <div className="flex flex-col gap-12 items-center md:items-start">
           {teamMembers.map((member, index) => (
             <ProfileCard
               key={index}
