@@ -28,7 +28,7 @@ export const Toggle = ({
 }) => {
   return (
     <fieldset
-      className={`flex p-2 items-center rounded-full font-accent font-bold w-fit bg-neutral-200 text-gray-800 border border-neutral-200 dark:bg-neutral-900 dark:text-neutral-500 dark:border-neutral-800 ${className}`}
+      className={`flex p-2 items-center rounded-full font-accent font-bold w-fit bg-neutral-200 text-gray-800 border border-neutral-200 dark:bg-neutral-900 dark:text-neutral-400 dark:border-neutral-800 ${className}`}
     >
       {items.map((item) => (
         <label
