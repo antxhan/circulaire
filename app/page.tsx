@@ -6,6 +6,11 @@ import About from "./_sections/About";
 import Hero from "./_sections/Hero";
 import Integrations from "./_sections/Integrations";
 
+export const metadata = {
+  title: "Circulaire",
+  description: "AI-powered pricing support for second-hand sellers. Access real-time data via API or UI to increase margins and simplify pricing decisions.",
+};
+
 export default function Home() {
   return (
     <div>
