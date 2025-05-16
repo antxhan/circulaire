@@ -13,7 +13,7 @@ const teamMembers = [
     contacts: [
       {
         icon: <LinkedinIcon />,
-        label: "LinkedIn",
+        label: "Emil LinkedIn",
         url: links.EmilLinkedin,
       },
     ],
@@ -25,7 +25,7 @@ const teamMembers = [
     contacts: [
       {
         icon: <LinkedinIcon />,
-        label: "LinkedIn",
+        label: "Andreas LinkedIn",
         url: links.AndreasLinkedin,
       },
     ],

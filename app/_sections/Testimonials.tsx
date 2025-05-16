@@ -47,10 +47,10 @@ export default function Testimonials() {
                       className="object-cover w-full h-full"
                     />
                   </div>
-                  <div className="leading-[1]">
-                    <h6 className="text-xl font-bold font-accent leading-[1]">
+                  <div className="leading-[1] flex flex-col">
+                    <span className="text-xl font-bold font-accent leading-[1]">
                       {testimonial.name}
-                    </h6>
+                    </span>
                     <span className="text-sm font-normal">
                       {testimonial.profession}
                     </span>

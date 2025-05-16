@@ -25,7 +25,7 @@ export default function Footer() {
         </div>
         <div className="flex justify-between gap-8 flex-wrap max-sm:items-center max-sm:flex-col">
           <div className="flex gap-4 flex-col max-sm:items-center">
-            <ExternalLink href={links.companyLinkedin} className="w-max">
+            <ExternalLink href={links.companyLinkedin} className="w-max" aria-label="Company LinkedIn">
               <LinkedinIcon className="transition duration-300 filter hover:text-blue-500" />
             </ExternalLink>
             <span className="max-sm:text-center text-balance">

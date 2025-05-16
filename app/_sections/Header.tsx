@@ -11,6 +11,7 @@ export default function Header() {
         <Link
           href={links.home}
           className="hover:!text-black dark:hover:!text-white"
+          aria-label="Home"
         >
           <WordMarkLogo />
         </Link>
